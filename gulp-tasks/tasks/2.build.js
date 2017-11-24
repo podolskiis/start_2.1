@@ -65,7 +65,7 @@ gulp.task('files', function() {
 /* START BUILD
  ********************************************************/
  gulp.task('b', function(cb) {
-   gulpSequence(['sass', 'pug'], 'clean', ['img', 'useref', 'minify-css', 'files'], cb);
+   gulpSequence('clean', ['img', 'useref', 'minify-css', 'files'], cb);
  });
 
  /* CLEAR ALL CACHE
