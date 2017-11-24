@@ -1,0 +1,8 @@
+// Max Classes (max-width)
+$container-width:           $xl - $grid-gutter*2;
+
+@for $i from 1 through $columns {
+  [class~='max-width-#{$i}'] {
+    max-width: (($container-width / 12) * $i) !important;
+  }
+}

@@ -1,0 +1,34 @@
+// Typography
+@include title-size(ems, (36,30,24,18,14,12));
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
+  margin: ems($gutter_p_base) 0 ems($gutter_p_base/2);
+}
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,
+h5,.h5,h6,.h6,b,strong,th,dt {
+  // styles ...
+}
+
+p,.p,pre,ul,ol,dl,hr {
+  margin: ems($gutter_p_base) 0;
+}
+
+a,.b-link {
+  text-decoration: none;
+  color: $link_color_base;
+  &:hover {
+    color: $link_hover_color_base;
+    text-decoration: underline;
+  }
+}
+
+a,input,textarea,button,.btn,.b-link {
+  @include tsn;
+}
+
+[class^="svg-"], [class*=" svg-"] {
+  rect, path {
+    @include tsn-svg(stroke);
+  }
+}

@@ -1,0 +1,33 @@
+body
+  margin: 0
+  padding: 0
+  background: #fff
+  font-family: $ff_base
+  font-size: $fz_base
+  font-weight: $fw_base
+  line-height: $lh_base
+  color: $fc_base
+
+html, body
+  @if $fix_width_site
+    min-width: ($fix_width_site + $grid-gutter)
+  // @else
+    min-width: 300px
+
+.grid
+  @if $fix_width_site
+    width: ($fix_width_site + $grid-gutter) !important
+    max-width: none !important
+  @media(max-width: 479px)
+    padding: 0 10px
+
+.page-wrap
+  overflow: hidden
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+  > main
+    flex: 1 0 auto
+
+[class*="b-list"]
+  +reset-list

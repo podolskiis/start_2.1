@@ -1,0 +1,31 @@
+meta(charset="utf-8")
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+meta(name="viewport" content="width=device-width, initial-scale=1")
+
+block title
+  title=title
+
++favicon
+
+meta(name="description" content="")
+meta(name="keywords" content="")
+
+// build:css css/vendors.min.css 
+= '\n'
+<!-- bower:css -->
+<link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
+<!-- endbower -->
+// endbuild 
+
+if icomoon
+  +links("//i.icomoon.io/public/temp/"+icomoon+"/style.css")
+
++links(
+  "css/theme.min.css"+revAppend,
+  "css/theme.edit.css"
+)
+
+if modernizr
+  +scripts("js/modernizr.js")
+
++ltIE-10

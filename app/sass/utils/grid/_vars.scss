@@ -1,0 +1,55 @@
+// Fixed Width of the site | 980px | false
+$fix_width_site: false;
+
+// Breakpoints Window
+$sm: 576px ;
+$md: 768px ;
+$lg: 992px ;
+$xl: 1200px;
+
+// Media Min
+$min-sm: 'min-width: #{$sm}';
+$min-md: 'min-width: #{$md}';
+$min-lg: 'min-width: #{$lg}';
+$min-xl: 'min-width: #{$xl}';
+
+// Media Max
+$max-sm: 'max-width: #{$sm - 1}';
+$max-md: 'max-width: #{$md - 1}';
+$max-lg: 'max-width: #{$lg - 1}';
+$max-xl: 'max-width: #{$xl - 1}';
+
+// Breakpoints Variables
+$breakpoints: (
+        xs : 0,
+        sm : $sm,
+        md : $md,
+        lg : $lg,
+        xl : $xl
+) !default;
+
+// Breakpoints Content
+$breakpoints-max-width: (
+        sm : 540px,
+        md : 720px,
+        lg : 960px,
+        xl : 1140px
+) !default;
+
+// Number of columns
+$columns: 12 !default;
+
+// Grid base gutter of columns
+// 15px 0.9375rem | 16px 1rem | 20px 1.25rem | 30px 1.875rem | 40px 2.5rem
+$grid-gutter: $gutter_base;
+$grid-gutter-sm: 20px;
+
+// Naming - BEM
+// Block
+$b-grid: 'grid';
+$b-row:  'row';
+$b-col:  'col';
+// Modifier
+$m-grid: '#{$b-grid}--';
+$m-row:  '#{$b-row}--';
+$m-col:  '#{$b-col}--';

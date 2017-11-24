@@ -1,0 +1,104 @@
+// PIXEL PERFECT
+  body
+    @include bg('1.jpg',50%)
+    opacity: .7
+.s-header, .s-footer
+  background: #9ACD32
+
+.test
+  background: rgba(0, 0, 0, .5)
+  color: #fff
+  text-align: center
+  padding: 20px
+  .red
+    color: #c00
+  .fit &
+    background: #333
+
+
+.b-title
+.b-logo
+  margin: 0
+  display: inline-block
+  line-height: 0
+  vertical-align: top
+  &__link
+    text-decoration: none
+    color: $fc_base
+    display: block
+    &:hover
+      text-decoration: none
+      color: inherit
+.b-main-menu
+  $root: &
+  ul
+    +reset-list
+  &__list
+    +row-flex
+  &__item
+    position: relative
+  &__link
+    text-decoration: none
+    display: block
+    background: #ddd
+    color: $fc_base
+    line-height: 38px
+    padding: 0 15px
+    &:hover,
+    #{$root}__item.active &
+      color: #fff
+      background: #999
+  &__submenu
+    display: none
+    position: absolute
+    z-index: 99
+    width: 220px
+    #{$root}__item:hover > &,
+    #{$root}-submenu__item:hover > &
+      display: block
+    #{$root}__submenu &
+      top: 0
+      left: 100%
+  &-submenu
+    margin: 0
+    padding: 10px 0
+    background: #ddd
+    box-shadow: $box_shadow_base
+    &__item
+      position: relative
+    &__link
+      display: block
+      padding: 10px 15px
+.b-breadcrumb
+  +row-flex
+  +row-gutter-top(5px)
+  margin: 0 0 15px
+  >
+    *::before
+      content: '|'
+      margin: 0 10px
+    *:first-child::before
+      display: none
+  @media($max-md)
+    display: none
+.b-phone
+  text-decoration: none
+  color: $fc_base
+  white-space: nowrap
+  &__cod
+    color: #fff
+  &__num
+    font-weight: 700
+
+
+.s-base
+  position: relative
+  padding: 30px 0
+  @media($min-md)
+    padding: 50px 0
+.s-header
+  a
+    &:hover
+.s-footer
+  a
+    &:hover

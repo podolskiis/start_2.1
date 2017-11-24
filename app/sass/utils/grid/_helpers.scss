@@ -1,0 +1,23 @@
+[class*="show-"], [class*="-show"] {
+  display: none;
+}
+
+@mixin helpers-generator($suffix) {
+  [class~="#{$suffix}-hide"] {
+    display: none !important;
+  }
+  [class~="#{$suffix}-show"] {
+    display: block !important;
+    display: initial !important;
+    display: unset !important;
+  }
+  [class~='#{$suffix}-text-left'] {
+    text-align: left;
+  }
+  [class~='#{$suffix}-text-right'] {
+    text-align: right;
+  }
+  [class~='#{$suffix}-text-center'] {
+    text-align: center;
+  }
+}

@@ -1,0 +1,16 @@
+[class*="animated-"]
+  visibility: hidden
+
+.animated-for
+  $delay: .7s
+  @for $i from 2 through 5
+    &:nth-child(#{$i})
+      animation-delay: ($delay*$i)-$delay
+
+// Disable Animation on Mobile Devices
+@media (max-width: 767px)
+  .animated
+    opacity: 1
+    transition-property: none !important
+    transform: none !important
+    animation: none !important

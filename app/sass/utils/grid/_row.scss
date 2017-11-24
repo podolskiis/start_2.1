@@ -1,0 +1,61 @@
+[class~="#{$b-row}"] {
+  flex-wrap: wrap;
+  display: flex;
+  @include row-gutter;
+  & + & {
+    margin-top: 0;
+  }
+}
+
+@mixin row-generator($suffix) {
+  [class~="#{$m-row+$suffix}-start"] {
+    align-items: flex-start;
+  }
+  [class~="#{$m-row+$suffix}-middle"] {
+    align-items: center;
+    align-content: center;
+  }
+  [class~="#{$m-row+$suffix}-end"] {
+    align-items: flex-end;
+  }
+  [class~="#{$m-row+$suffix}-center"] {
+    justify-content: center;
+  }
+  [class~="#{$m-row+$suffix}-reverse"] {
+    flex-direction: row-reverse;
+  }
+  [class~="#{$m-row+$suffix}-around"] {
+    justify-content: space-around;
+  }
+  [class~="#{$m-row+$suffix}-between"] {
+    justify-content: space-between;
+  }
+  [class~="#{$m-row+$suffix}-stretch"] {
+    align-items: stretch;
+    flex-flow: row wrap;
+    & > [class~="#{$b-col}"] {
+      display: flex;
+      & > * { width: 100%; }
+    }
+  }
+  [class~="#{$m-row+$suffix}-content"] > [class~="#{$b-col}"] {
+    width: auto;
+    flex: 0 0 auto;
+    flex-basis: auto;
+  }
+  [class~="#{$m-row+$suffix}-gutter-none"] > [class~="#{$b-col}"] {
+    padding: 0;
+  }
+  [class~="#{$m-row+$suffix}-gutter-bottom-none"] > [class~="#{$b-col}"] {
+    @include row-gutter-bottom-none;
+  }
+  [class~="#{$m-row+$suffix}-gutter-between-none"] > [class~="#{$b-col}"] {
+    @include row-gutter-between-none;
+  }
+  [class~="#{$m-row+$suffix}-gutter-none"],
+  [class~="#{$m-row+$suffix}-gutter-between-none"] {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}

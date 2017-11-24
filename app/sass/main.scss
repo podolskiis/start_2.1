@@ -1,0 +1,23 @@
+/*!
+    Main Project Theme
+    Front-end Developer: Sergey Podolsky
+*/
+
+@import 'vars';
+
+@import 'utils/functions/import';
+@import 'utils/mixins/import';
+@import 'utils/grid/import';
+@import 'utils/helpers/import';
+
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/base';
+
+@import 'components/buttons';
+// @import 'components/placeholders';
+// @import 'components/forms';
+// @import 'components/styler';
+// @import 'components/fancybox';
+
+@import 'themes/theme';

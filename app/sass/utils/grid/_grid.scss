@@ -1,0 +1,29 @@
+[class~="#{$b-grid}"] {
+  @include clearfix
+  padding: 0 $grid-gutter/2;
+  margin: 0 auto;
+  width: 100%;
+  // Container sizes
+  @each $breakpoint, $width in $breakpoints {
+    @if ($width > 0) {
+      @media (min-width: $width) {
+        @each $breakpoint-max-width, $max-width in $breakpoints-max-width {
+          @if ($breakpoint == $breakpoint-max-width) {
+            max-width: ($max-width + $grid-gutter);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin grid-generator($suffix) {
+  [class~="#{$b-grid}"] {
+    &[class~="#{$m-grid+$suffix}-full"] {
+      max-width: none;
+    }
+    &[class~="#{$m-grid+$suffix}-gutter-none"] {
+      padding: 0;
+    }
+  }
+}
