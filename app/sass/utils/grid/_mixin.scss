@@ -1,42 +1,20 @@
 // GRID-GUTTER
-@mixin row-gutter {
-  @mixin gutter($p) {
-    margin-top: -$p;
-    margin-left: -$p/2;
-    margin-right: -$p/2;
-  }
-  @include gutter($grid-gutter);
-  @if $grid-gutter-sm {
-    @media($max-sm) {
-      @include gutter($grid-gutter-sm);
+@mixin grid-gutter($element) {
+  @mixin gutter($gt) {
+    @if $element == $b-row {
+      margin-top: -$gt;
+      margin-left: -$gt/2;
+      margin-right: -$gt/2;
     }
-  }
-}
-@mixin col-gutter {
-  @mixin gutter($p) {
-    padding: $p $p/2 0 $p/2;
-  }
-  @include gutter($grid-gutter);
-  @if $grid-gutter-sm {
-    @media($max-sm) {
-      @include gutter($grid-gutter-sm);
+    @else if $element == '#{$b-row}-gutter-bottom-none' {
+      padding: 0 $gt/2 0 $gt/2;
     }
-  }
-}
-@mixin row-gutter-bottom-none {
-  @mixin gutter($p) {
-    padding: 0 $p/2 0 $p/2;
-  }
-  @include gutter($grid-gutter);
-  @if $grid-gutter-sm {
-    @media($max-sm) {
-      @include gutter($grid-gutter-sm);
+    @else if $element == '#{$b-row}-gutter-between-none' {
+      padding: 0 0 $gt 0;
     }
-  }
-}
-@mixin row-gutter-between-none {
-  @mixin gutter($p) {
-    padding: 0 0 $p 0;
+    @else if $element == $b-col {
+      padding: $gt $gt/2 0 $gt/2;
+    }
   }
   @include gutter($grid-gutter);
   @if $grid-gutter-sm {

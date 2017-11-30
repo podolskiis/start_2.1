@@ -2,7 +2,7 @@
   width: 100%;
   flex: 0 0 100%;
   max-width: 100%;
-  @include col-gutter;
+  @include grid-gutter($b-col);
   display: block;
 }
 

@@ -18,8 +18,9 @@ html, body
   @if $fix_width_site
     width: ($fix_width_site + $grid-gutter) !important
     max-width: none !important
-  @media(max-width: 479px)
-    padding: 0 10px
+  @else
+    @media(max-width: 479px)
+      padding: 0 10px
 
 .page-wrap
   overflow: hidden

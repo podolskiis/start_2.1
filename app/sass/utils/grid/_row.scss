@@ -1,7 +1,7 @@
 [class~="#{$b-row}"] {
   flex-wrap: wrap;
   display: flex;
-  @include row-gutter;
+  @include grid-gutter($b-row);
   & + & {
     margin-top: 0;
   }
@@ -47,10 +47,10 @@
     padding: 0;
   }
   [class~="#{$m-row+$suffix}-gutter-bottom-none"] > [class~="#{$b-col}"] {
-    @include row-gutter-bottom-none;
+    @include grid-gutter('#{$b-row}-gutter-bottom-none');
   }
   [class~="#{$m-row+$suffix}-gutter-between-none"] > [class~="#{$b-col}"] {
-    @include row-gutter-between-none;
+    @include grid-gutter('#{$b-row}-gutter-between-none');
   }
   [class~="#{$m-row+$suffix}-gutter-none"],
   [class~="#{$m-row+$suffix}-gutter-between-none"] {
