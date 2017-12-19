@@ -10,7 +10,15 @@ h5,.h5,h6,.h6,b,strong,th,dt {
   // styles ...
 }
 
-p,.p,pre,ul,ol,dl,hr {
+p,.p,pre,.pre,ul,.ul,ol,.ol,dl,.dl {
+  margin-top: 0;
+  margin-bottom: ems($gutter_p_base);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+hr,.hr {
   margin: ems($gutter_p_base) 0;
 }
 

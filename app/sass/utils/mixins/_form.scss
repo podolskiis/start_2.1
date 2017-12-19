@@ -1,7 +1,7 @@
-// 
+//
 @mixin form-field() {
   padding: $input_padding_y $input_padding_x;
-  line-height: $input_height - $input_padding_y*2 - $input_border_width*2;
+  line-height: ($input_height) - ($input_padding_y*2) - ($input_border_width*2);
   height: $input_height;
   border-width: $input_border_width;
   border-style: solid;

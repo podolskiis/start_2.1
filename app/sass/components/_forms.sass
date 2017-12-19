@@ -12,11 +12,15 @@
     font-family: $ff_base
     font-weight: $fw_base
     color: $fc_base
-    font-size: 16px
+    font-size: $input_font_size
+    @media($max-md)
+      font-size: 16px
   textarea#{$root}__field
     display: block
   select#{$root}__field
-    font-size: 16px
+    font-size: $input_font_size
+    @media($max-md)
+      font-size: 16px
   @at-root
     #{&}--default
       #{$root}__field

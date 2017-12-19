@@ -24,6 +24,7 @@ mixin b-multiMenu(data, navСlass, dropdown)
           if (item.submenu && dropdown)
             div(class=navСlass+'__submenu')
               +multiSubmenu(item.submenu, navСlass, count)
+
 mixin b-menu-data(data)
   //- EXAMPLE: +b-menu-data(menu_main)
   ul&attributes(attributes)
@@ -42,6 +43,7 @@ mixin b-breadcrumb(items)
           span= item
         else
           a(href="#")= item
+
 mixin b-list(itemTag, mod, items, active)
   //- EXAMPLE: +b-list('a', 'mod', ['item1','item2','item3'], 2)
   div(class= mod)&attributes(attributes)
@@ -55,6 +57,16 @@ mixin b-list(itemTag, mod, items, active)
           else
             != val
 
+mixin b-social
+  //- EXAMPLE: +b-social
+  - var mod = 'b-social'
+  div(class= mod)&attributes(attributes)
+    ul(class= mod+'__list')
+      each val in ['fk','vk','tw','in']
+        li(class= mod+'__item')
+          a(href="#" class= mod+'__link')
+            i(class= mod+'__icon icon-'+val)
+              
 //- LINK
 mixin b-email(email,icon)
   //- EXAMPLE: +b-email('email@google.com', 'icon-vk')
