@@ -1,23 +1,14 @@
-[class*="show-"], [class*="-show"] {
-  display: none !important;
-}
-
-@mixin helpers-generator($suffix) {
-  [class~="#{$suffix}-hide"] {
+@mixin helpers-generator($suffix, $resize: '') {
+  [class~="hide--#{$suffix}-#{$resize}"] {
     display: none !important;
   }
-  [class~="#{$suffix}-show"] {
-    display: block !important;
-    display: initial !important;
-    display: unset !important;
-  }
-  [class~='#{$suffix}-text-left'] {
+  [class~="text-left--#{$suffix}-#{$resize}"] {
     text-align: left;
   }
-  [class~='#{$suffix}-text-right'] {
+  [class~="text-right--#{$suffix}-#{$resize}"] {
     text-align: right;
   }
-  [class~='#{$suffix}-text-center'] {
+  [class~="text-center--#{$suffix}-#{$resize}"] {
     text-align: center;
   }
 }

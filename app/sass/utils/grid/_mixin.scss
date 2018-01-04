@@ -30,7 +30,7 @@
   @include grid-generator($suffix);
   @include row-generator($suffix);
   @include column-generator($suffix);
-  @include helpers-generator($suffix);
+  @include helpers-generator($suffix, $resize: 'up');
 }
 
 @mixin grid-init {
@@ -38,6 +38,9 @@
     @if ($width > 0) {
       @media (min-width: $width) {
         @include media-generator($suffix);
+      }
+      @media (max-width: $width - 1) {
+        @include helpers-generator($suffix, $resize: 'down');
       }
     }
     @else {

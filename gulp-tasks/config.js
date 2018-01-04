@@ -55,6 +55,10 @@ module.exports = {
         src:        'app/js/**',
         dest:       'www/js'
   	  },
+      video: {
+        src:        'app/video/**',
+        dest:       'www/video'
+  	  },
       dop: {
         src: [
                     'app/*.ico',
