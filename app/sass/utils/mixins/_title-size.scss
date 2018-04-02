@@ -8,7 +8,7 @@
     }
     @else if $px == px {
       h#{$i}, .h#{$i} {
-        font-size: px($size);
+        font-size: $size + px;
       }
     }
     @else if $px == em {

@@ -19,6 +19,9 @@ $max-md: 'max-width: #{$md - 1}';
 $max-lg: 'max-width: #{$lg - 1}';
 $max-xl: 'max-width: #{$xl - 1}';
 
+$max-base: $max-lg;
+$min-base: $min-lg;
+
 // Breakpoints Variables
 $breakpoints: (
         xs : 0,
@@ -51,8 +54,8 @@ $grid-gutter-sm: 20px;
 // Naming - BEM
 // Block
 $b-grid: 'grid';
-$b-row:  'row';
-$b-col:  'col';
+$b-row:  'rw';
+$b-col:  'cl';
 // Modifier
 $m-grid: '#{$b-grid}--';
 $m-row:  '#{$b-row}--';

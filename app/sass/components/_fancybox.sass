@@ -26,8 +26,9 @@
     width: 100%
     @media($max-sm)
       padding: 30px 15px
-  #{$root}__cancel
+  #{$root}__close
     position: absolute
+    z-index: 9
     top: 15px
     right: 15px
     opacity: .5
@@ -53,6 +54,9 @@
       // MODALL--FORM
       .fancybox-slide &
         background: #fff
-        @media($min-sm)
-          max-width: 600px
-          padding: 60px
+        @media($max-base)
+          max-width: 320px !important
+          #{$root}__content
+            background: #fff
+            padding: 30px
+            margin: -30px

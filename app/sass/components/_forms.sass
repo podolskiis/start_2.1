@@ -1,30 +1,10 @@
 .form
   $root: &
-  #{$root}__field
-    outline: none
-    margin: 0
-    padding: 0
-    -webkit-appearance: none
-    box-shadow: none
-    border: none
-    border-radius: 0
-    vertical-align: top
-    font-family: $ff_base
-    font-weight: $fw_base
-    color: $fc_base
-    font-size: $input_font_size
-    @media($max-md)
-      font-size: 16px
-  textarea#{$root}__field
-    display: block
-  select#{$root}__field
-    font-size: $input_font_size
-    @media($max-md)
-      font-size: 16px
   @at-root
+    +field-base($root)
     #{&}--default
       #{$root}__field
-        +form-field
+        +field-default
       textarea#{$root}__field
         height: auto
         min-height: 100px
@@ -42,6 +22,10 @@
           margin-top: 0
         &--btn
           margin-top: $form_group_gutter*2
+      // .b-input-icon
+        +input-icon
+        &__field
+        &__icon
       // VALIDATE
         input.error,textarea.error
           border-color: red !important

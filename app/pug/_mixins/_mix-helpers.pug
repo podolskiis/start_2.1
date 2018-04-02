@@ -36,13 +36,15 @@ mixin b-menu-data(data)
 //- LIST
 mixin b-breadcrumb(items)
   //- EXAMPLE: +b-breadcrumb(['Главная','Категория','Страница'])
-  ul.b-breadcrumb&attributes(attributes)
-    each item, index in items
-      li
-        if (index == items.length - 1)
-          span= item
-        else
-          a(href="#")= item
+  - var mod = 'b-breadcrumb'
+  div(class=mod)&attributes(attributes)
+    ul(class=mod+'__list')
+      each item, index in items
+        li(class=mod+'__item')
+          if (index == items.length - 1)
+            span(class=mod+'__span')= item
+          else
+            a(href="#" class=mod+'__link')= item
 
 mixin b-list(itemTag, mod, items, active)
   //- EXAMPLE: +b-list('a', 'mod', ['item1','item2','item3'], 2)

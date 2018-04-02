@@ -4,7 +4,17 @@
   overflow-x: auto;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 17px;
-  margin-bottom: -17px;
   position: relative;
+  margin: ems($gutter_p_base*2) 0;
+  & > table {
+    margin: 0;
+    & > thead > tr > th,
+    & > tbody > tr > th,
+    & > tfoot > tr > th,
+    & > thead > tr > td,
+    & > tbody > tr > td,
+    & > tfoot > tr > td {
+        white-space: nowrap;
+    }
+  }
 }

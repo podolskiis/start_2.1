@@ -1,17 +1,17 @@
 header.s-header.s-base
   .grid
-    .row.row--md-middle
-      .col.col--md-fit.col--xs-fill
+    .rw.rw--md-middle
+      .cl.cl--md-fit.cl--xs-fill
         +b-logo('logo.png')
-      .col.col--md-fill.col--xs-fit
+      .cl.cl--md-fill.cl--xs-fit
         .md-show
-          .row.row--md-center.row--md-content
-            .col
+          .rw.rw--md-center.rw--md-content
+            .cl
               +b-multiMenu(menu_main,'b-main-menu','submenu')
         .md-hide.float-right
           button(data-bars="btn" aria-hidden="true").btn
             | ☰
-      .col.col--md-fit
+      .cl.cl--md-fit
         ul.reset-list
           li
             a.b-phone(href="tel:+71234567890")

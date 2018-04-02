@@ -1,5 +1,32 @@
-//
-@mixin form-field() {
+// field base reset
+@mixin field-base($root) {
+  #{$root}__field {
+    outline: none;
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    vertical-align: top;
+    &:not(textarea) {
+      @include text-overflow;
+    }
+  }
+  textarea#{$root}__field {
+    display: block;
+  }
+  @media($max-md) {
+    #{$root}__field,
+    #{$root}__select {
+      font-size: 16px !important;
+    }
+  }
+}
+
+
+// field default style
+@mixin field-default() {
   padding: $input_padding_y $input_padding_x;
   line-height: ($input_height) - ($input_padding_y*2) - ($input_border_width*2);
   height: $input_height;
@@ -8,10 +35,44 @@
   background: $input_bg;
   border-color: $input_border_color;
   border-radius: $input_border_radius;
+  font-family: $ff_base;
+  font-size: $input_font_size;
+  font-weight: $fw_base;
+  color: $fc_base;
   &:focus {
     border-color: $input_border_focus_color;
   }
 }
+
+
+// field icon style
+@mixin input-icon($icon_z: 18px, $icon_zi: 0) {
+  background: $input_bg;
+  position: relative;
+  &__field {
+    background-color: transparent !important;
+    vertical-align: middle !important;
+    position: relative !important;
+    width: 100% !important;
+    padding-right: ($input_padding_x*2) + $icon_z;
+    @if $icon_zi == 0 {
+      z-index: 1;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: $input_padding_x;
+    color: $placeholder_color;
+    font-size: $icon_z;
+    @if $icon_zi > 0 {
+      z-index: $icon_zi;
+      cursor: pointer;
+    }
+  }
+}
+
 
 // placehold
 @mixin placeholders {

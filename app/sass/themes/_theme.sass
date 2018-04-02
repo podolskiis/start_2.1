@@ -62,15 +62,18 @@
       display: block
       padding: 10px 15px
 .b-breadcrumb
-  +row-flex
-  +row-gutter-top(5px)
-  margin: 0 0 15px
-  >
-    *::before
+  &__list
+    +row-flex
+    +gutter-top(5px)
+    margin: 0 0 15px
+  &__item
+    &::before
       content: '|'
       margin: 0 10px
-    *:first-child::before
+    &:first-child::before
       display: none
+  &__link
+  &__span
   @media($max-md)
     display: none
 .b-phone

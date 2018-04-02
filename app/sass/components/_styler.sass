@@ -13,10 +13,11 @@ select.b-styler
       .jq-selectbox
         &__select
           +form-field
+          +tsn
           position: relative
           color: $placeholder_color
           padding-right: $input_padding_x*3
-          font-size: 16px
+          font-size: $input_font_size
         &__select-text
           min-width: 100.1%
         &__trigger-arrow
@@ -41,11 +42,13 @@ select.b-styler
               line-height: 1.2
               padding: $input_padding_y $input_padding_x
               cursor: pointer
-              font-size: 16px
+              font-size: $input_font_size
       &.focused
         .jq-selectbox
       &.opened
         .jq-selectbox
+          &__select
+            border-color: $input_border_focus_color
           &__trigger-arrow
             border-top-color: $fc_base
             transform: rotate(180deg)

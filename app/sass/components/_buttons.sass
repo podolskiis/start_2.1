@@ -1,4 +1,4 @@
-.btn
+.b-btn
   $root: &
   +btn
   +btn-group($root)
@@ -9,16 +9,27 @@
     font-size: $fz_base
     padding: 0 1rem
     +btn-size(36px)
+  // ICON
+  &__icon
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    top: -1px
+    font-size: 120%
+    &--right
+      margin-left: 5px
+    &--left
+      margin-right: 5px
   // COLOR
   &--default
-    @extend .btn--base
+    @extend #{$root}--base
     background: $link_color_base
     color: #fff
     &:hover
       background: $link_hover_color_base
   // OUTLINE
   &--outline-default
-    @extend .btn--base
+    @extend #{$root}--base
     border-color: $link_color_base
     color: $link_color_base
     &:hover
