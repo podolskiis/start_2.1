@@ -5,12 +5,12 @@ html(lang="ru")
   head
     include _head.pug
   body.page(class=bodyClasses)
-    if off_top
-      include ../_section/_off-top.pug
+    if hide_top
+      include ../_section/_static/_hide-top.pug
     .page-wrap
       if header
         // HEADER START 
-        include ../_section/_s-header.pug
+        include ../_section/_static/_s-header.pug
         // HEADER END 
       if main
         // MAIN START 
@@ -19,11 +19,11 @@ html(lang="ru")
         // MAIN END 
       if footer
         // FOOTER START 
-        include ../_section/_s-footer.pug
+        include ../_section/_static/_s-footer.pug
         // FOOTER END 
-    if off_bot
+    if hide_bot
       // MODALS START 
       .modals-wrap.hidden
-        include ../_section/_off-bot.pug
+        include ../_section/_static/_hide-bot.pug
       // MODALS END 
     include _script.pug

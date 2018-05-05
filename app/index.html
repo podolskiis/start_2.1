@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="x-rim-auto-match" content="none">
         <title>О компании | start</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -76,7 +78,7 @@
             <!-- MAIN START -->
             <main class="s-main">
                 <div class="s-base">
-                    <div class="grid">
+                    <div class="grid grid--xl-full">
                         <div class="b-breadcrumb">
                             <ul class="b-breadcrumb__list">
                                 <li class="b-breadcrumb__item"><a class="b-breadcrumb__link" href="#">Главная</a>
@@ -105,8 +107,8 @@
                             <div class="form__group">
                                 <textarea class="form__field w100p" rows="5" name="msg" placeholder="Сообщение" required></textarea>
                             </div>
-                            <div class="form__group form__group--btn">
-                                <button class="b-btn b-btn--default" type="submit">submit</button>
+                            <div class="form__group form__group--bn">
+                                <button class="bn bn--default" type="submit">submit</button>
                             </div>
                         </form>
                     </div>
@@ -128,6 +130,40 @@
             </footer>
             <!-- FOOTER END -->
         </div>
+        <!-- MODALS START -->
+        <div class="modals-wrap hidden">
+            <div class="modall modall--form" id="id_1">
+                <div class="modall__content">
+                    <h3 class="modall__title">title</h3>
+                    <form class="form form--default">
+                        <div class="form__group">
+                            <input class="form__field" type="text" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form__group">
+                            <input class="form__field" type="email" name="email" placeholder="Ваш e-mail" required>
+                        </div>
+                        <div class="form__group">
+                            <input class="form__field" type="tel" name="phone" placeholder="Ваш телефон" required>
+                        </div>
+                        <div class="form__group">
+                            <textarea class="form__field w100p" rows="5" name="msg" placeholder="Сообщение" required></textarea>
+                        </div>
+                        <div class="form__group form__group--btn">
+                            <button class="btn btn--default" type="submit">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modall modall--text" id="id_2">
+                <div class="modall__content">
+                    <h3 class="modall__title">title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis cum voluptates sed commodi maxime quidem magnam, non assumenda inventore in nemo, dolore, voluptas quam. Itaque quos dolorem architecto deserunt, adipisci!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis cum voluptates sed commodi maxime quidem magnam, non assumenda inventore in nemo, dolore, voluptas quam. Itaque quos dolorem architecto deserunt, adipisci!</p>
+                </div>
+            </div>
+        </div>
+        <!-- MODALS END -->
+
         <!-- build:js js/vendors.min.js -->
 <!-- bower:js -->
 <script src="/bower_components/jquery/dist/jquery.js"></script>

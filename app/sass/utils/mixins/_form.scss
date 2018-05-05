@@ -9,6 +9,7 @@
     border: none;
     border-radius: 0;
     vertical-align: top;
+    max-width: 100%;
     &:not(textarea) {
       @include text-overflow;
     }
@@ -27,37 +28,46 @@
 
 // field default style
 @mixin field-default() {
+  letter-spacing: inherit;
   padding: $input_padding_y $input_padding_x;
   line-height: ($input_height) - ($input_padding_y*2) - ($input_border_width*2);
   height: $input_height;
   border-width: $input_border_width;
   border-style: solid;
-  background: $input_bg;
+  background-color: $input_bg_color;
   border-color: $input_border_color;
   border-radius: $input_border_radius;
   font-family: $ff_base;
   font-size: $input_font_size;
   font-weight: $fw_base;
-  color: $fc_base;
-  &:focus {
+  color: $input_font_color;
+  &:focus, &.focus {
+    background-color: $input_bg_focus_color;
     border-color: $input_border_focus_color;
   }
 }
 
 
 // field icon style
-@mixin input-icon($icon_z: 18px, $icon_zi: 0) {
-  background: $input_bg;
+@mixin field-icon($icon_z: 18px) {
+  @include tsn;
   position: relative;
+  display: inline-block;
+  padding: 0 !important;
   &__field {
+    @include field-default;
+    outline: none !important;
+    -webkit-appearance: none !important;
+    box-shadow: none !important;
+    vertical-align: top;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
     background-color: transparent !important;
-    vertical-align: middle !important;
-    position: relative !important;
-    width: 100% !important;
-    padding-right: ($input_padding_x*2) + $icon_z;
-    @if $icon_zi == 0 {
-      z-index: 1;
-    }
+    border: none !important;
+    padding-right: ($input_padding_x * 2) + $icon_z !important;
+    margin: - $input_border_width;
+    max-width: calc(100%  + #{$input_border_width*2});
   }
   &__icon {
     position: absolute;
@@ -66,8 +76,9 @@
     right: $input_padding_x;
     color: $placeholder_color;
     font-size: $icon_z;
-    @if $icon_zi > 0 {
-      z-index: $icon_zi;
+    font-weight: normal;
+    &--over {
+      z-index: 2;
       cursor: pointer;
     }
   }

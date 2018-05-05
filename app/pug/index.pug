@@ -3,18 +3,19 @@ block vars
   - title = ['О компании']
   - header = true
   - footer = true
-  //- - off_bot = true
+  - hide_bot = true
 block content
   .s-base
-    .grid
+    .grid.grid--xl-full
+      
       +b-breadcrumb(['Главная','Категория','Статья','Статья2'])
+      
       h1
         | Title
-      //- p
-        img(src="//lorempixel.com/400/200", width="400", height="200", alt="").responsive-img
+      
       - for (var x = 1; x <= 1; x++)
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        +p
+      
       form.form.form--default
         .form__group
           label.form__label
@@ -26,6 +27,6 @@ block content
           input(type="tel" name="phone" placeholder="Ваш телефон" required).form__field
         .form__group
           textarea(rows="5" name="msg" placeholder="Сообщение" required).form__field.w100p
-        .form__group.form__group--btn
-          button(type="submit").b-btn.b-btn--default
+        .form__group.form__group--bn
+          button(type="submit").bn.bn--default
             | submit

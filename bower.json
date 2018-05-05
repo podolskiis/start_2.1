@@ -7,16 +7,7 @@
   },
   "overrides": {
     "fancybox": {
-      "main": [
-        "dist/jquery.fancybox.min.css",
-        "dist/jquery.fancybox.min.js"
-      ]
-    },
-    "jquery.form-styler": {
-      "main": [
-        "dist/jquery.formstyler.min.css",
-        "dist/jquery.formstyler.min.js"
-      ]
+      "dependencies": []
     }
   }
 }

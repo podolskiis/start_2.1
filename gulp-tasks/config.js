@@ -1,7 +1,7 @@
 var
   login             = 'admin',
   password          = 'admin',
-  project           = '2017/07/test';
+  project           = '2018/05/start';
 module.exports = {
   path: {
     app: {

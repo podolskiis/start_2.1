@@ -18,7 +18,8 @@ p,.p,pre,.pre,ul,.ul,ol,.ol,dl,.dl {
   }
 }
 
-hr,.hr {
+.hr {
+  border: none;
   margin: ems($gutter_p_base) 0;
 }
 
@@ -30,9 +31,12 @@ a,.b-link {
     color: $link_hover_color_base;
     text-decoration: underline;
   }
+  &:focus {
+    outline: none;
+  }
 }
 
-a,input,textarea,button,.btn,.b-link {
+a,input,textarea,button,.bn,.b-link {
   @include tsn;
 }
 

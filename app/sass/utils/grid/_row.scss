@@ -21,6 +21,12 @@
   [class~="#{$m-row+$suffix}-center"] {
     justify-content: center;
   }
+  [class~="#{$m-row+$suffix}-left"] {
+    justify-content: flex-start;
+  }
+  [class~="#{$m-row+$suffix}-right"] {
+    justify-content: flex-end;
+  }
   [class~="#{$m-row+$suffix}-reverse"] {
     flex-direction: row-reverse;
   }
@@ -29,6 +35,9 @@
   }
   [class~="#{$m-row+$suffix}-between"] {
     justify-content: space-between;
+  }
+  [class~="#{$m-row+$suffix}-nowrap"] {
+    flex-wrap: nowrap
   }
   [class~="#{$m-row+$suffix}-stretch"] {
     align-items: stretch;

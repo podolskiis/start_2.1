@@ -11,4 +11,7 @@
   [class~="text-center--#{$suffix}-#{$resize}"] {
     text-align: center;
   }
+  [class~="w100p--#{$suffix}-#{$resize}"] {
+    width: 100%;
+  }
 }

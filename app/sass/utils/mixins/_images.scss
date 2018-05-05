@@ -33,17 +33,18 @@ $srcImg:  '../images/theme/';
     opacity: $op;
   }
 }
-@mixin img-radius($z:100px,$bd_z:5px,$bd_c:#e00) {
-  border: $bd_z solid $bd_c;
+@mixin img-radius() {
   display: inline-block;
   vertical-align: middle;
   border-radius: 50%;
-  >* {
-    width: $z;
-    height: $z;
-    display: block;
+  > * {
+    @include z(1em)
     overflow: hidden;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
     img {
       display: block;
       width: 100%;

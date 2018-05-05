@@ -21,6 +21,12 @@ html, body
   @else
     @media(max-width: 479px)
       padding: 0 10px
+  // @if $maxFull
+    @media($min-xl)
+      &[class~="grid--xl-full"]
+        max-width: $maxFull
+  img
+    max-width: 100%
 
 .page-wrap
   overflow: hidden
