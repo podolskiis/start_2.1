@@ -1,48 +1,50 @@
 [class~="#{$b-col}"] {
-  width: 100%;
   flex: 0 0 100%;
   max-width: 100%;
-  @include grid-gutter($b-col);
+  padding-top: $grid-gutter;
+  padding-left: $grid-gutter/2;
+  padding-right: $grid-gutter/2;
   display: block;
+  width: 100%;
 }
 
-@mixin column-generator($suffix) {
-  [class~="#{$m-col+$suffix}"] {
+@mixin col-generator($breakpoint) {
+  [class~="#{$m-col+$breakpoint}"] {
     flex-grow: 1;
     flex-basis: 0;
   }
   @for $i from 1 through $columns {
-    [class~="#{$m-col+$suffix}-#{$i}"] {
+    [class~="#{$m-col+$breakpoint}-#{$i}"] {
       max-width: percentage($i/$columns);
       flex-basis: percentage($i/$columns);
     }
   }
   @for $i from 0 through $columns {
-    [class~="#{$m-col+$suffix}-offset-#{$i}"] {
+    [class~="#{$m-col+$breakpoint}-offset-#{$i}"] {
       margin-left: percentage($i/$columns);
     }
   }
-  [class~="#{$m-col+$suffix}-first"] {
+  [class~="#{$m-col+$breakpoint}-first"] {
     order: -1;
   }
-  [class~="#{$m-col+$suffix}-last"] {
+  [class~="#{$m-col+$breakpoint}-last"] {
     order: 1;
   }
-  [class~="#{$m-col+$suffix}-start"] {
+  [class~="#{$m-col+$breakpoint}-start"] {
     align-self: flex-start;
   }
-  [class~="#{$m-col+$suffix}-middle"] {
+  [class~="#{$m-col+$breakpoint}-middle"] {
     align-self: center;
   }
-  [class~="#{$m-col+$suffix}-end"] {
+  [class~="#{$m-col+$breakpoint}-end"] {
     align-self: flex-end;
   }
-  [class~="#{$m-col+$suffix}-fill"] {
+  [class~="#{$m-col+$breakpoint}-fill"] {
     width: auto;
     flex: 1 1 0%;
     flex-basis: 0%;
   }
-  [class~="#{$m-col+$suffix}-fit"] {
+  [class~="#{$m-col+$breakpoint}-fit"] {
     width: auto;
     flex: 0 0 auto;
     flex-basis: auto;

@@ -1,21 +1,17 @@
 extends _base/_main.pug
 block vars
   - title = ['О компании']
-  - header = true
-  - footer = true
-  - hide_bot = true
+  - header = 1
+  - footer = 1
+  - hide_bot = 1
 block content
   .s-base
-    .grid.grid--xl-full
-      
-      +b-breadcrumb(['Главная','Категория','Статья','Статья2'])
-      
+    .grid      
+      +b-breadcrumb(['Главная','Категория','Статья','Статья2'])      
       h1
-        | Title
-      
+        | Title      
       - for (var x = 1; x <= 1; x++)
-        +p
-      
+        +p      
       form.form.form--default
         .form__group
           label.form__label

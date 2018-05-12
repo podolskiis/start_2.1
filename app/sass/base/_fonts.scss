@@ -1,9 +1,3 @@
 // @each $fw in 100,200,300,400,500,600,700,800,900 {
 //   @include woff-font('Open Sans', 'opensans', $fw, n i);
 // }
-
-// Icomoon
-// @include font('icomoon', 'icomoon/icomoon');
-// [class^="icon-"], [class*=" icon-"] {
-//   @include icomoon;
-// }

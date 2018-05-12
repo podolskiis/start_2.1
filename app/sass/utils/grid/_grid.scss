@@ -17,12 +17,12 @@
   }
 }
 
-@mixin grid-generator($suffix) {
+@mixin grid-generator($breakpoint) {
   [class~="#{$b-grid}"] {
-    &[class~="#{$m-grid+$suffix}-full"] {
+    &[class~="#{$m-grid+$breakpoint}-full"] {
       max-width: none;
     }
-    &[class~="#{$m-grid+$suffix}-gutter-none"] {
+    &[class~="#{$m-grid+$breakpoint}-gutter-none"] {
       padding: 0;
     }
   }

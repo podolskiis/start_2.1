@@ -44,7 +44,7 @@ module.exports = {
   	},
     import: {
       css: {
-        src:        'app/css/theme.edit.css',
+        src:        'app/css/custom.css',
         dest:       'www/css/'
     	},
       fonts: {

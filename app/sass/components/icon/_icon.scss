@@ -1,0 +1,15 @@
+$spacingY: 8px;
+
+.icon {
+  &--middle {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -.25em;
+  }
+  &--layout-left {
+    margin-right: $spacingY;
+  }
+  &--layout-right {
+    margin-left: $spacingY;
+  }
+}

@@ -11,25 +11,24 @@
         <meta name="keywords" content="">
         <!-- build:css css/vendors.min.css -->
 <!-- bower:css -->
-<link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
 <!-- endbower -->
         <!-- endbuild -->
         <link rel="stylesheet" href="css/theme.min.css?rev=@@hash">
-        <link rel="stylesheet" href="css/theme.edit.css">
+        <link rel="stylesheet" href="css/custom.css">
         <!--[if lt IE 10]><link href="//rawgit.com/codefucker/finalReject/master/reject/reject.css" rel="stylesheet"/><script src="//rawgit.com/codefucker/finalReject/master/reject/reject.min.js"></script><![endif]-->
     </head>
     <body class="page">
         <div class="page-wrap">
-            <!-- HEADER START -->
+            <!-- HEADER: START -->
             <header class="s-header s-base">
                 <div class="grid">
-                    <div class="rw rw--md-middle">
-                        <div class="cl cl--md-fit cl--xs-fill">
+                    <div class="rw rw--lg-middle">
+                        <div class="cl cl--lg-fit cl--xs-fill">
                             <h2 class="b-logo"><a class="b-logo__link" href="/"><img class="b-logo__img" src="images/theme/logo.png" alt="start"><span class="b-logo__title hide">start</span></a></h2>
                         </div>
-                        <div class="cl cl--md-fill cl--xs-fit">
-                            <div class="md-show">
-                                <div class="rw rw--md-center rw--md-content">
+                        <div class="cl cl--lg-fill cl--xs-fit">
+                            <div class="hide--lg-max">
+                                <div class="rw rw--lg-center rw--lg-content">
                                     <div class="cl">
                                         <nav class="b-main-menu">
                                             <ul class="b-main-menu__list">
@@ -60,12 +59,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="md-hide float-right">
+                            <div class="hide--lg-min float-right">
                                 <button class="btn" data-bars="btn" aria-hidden="true">☰</button>
                             </div>
                         </div>
-                        <div class="cl cl--md-fit">
-                            <ul class="reset-list">
+                        <div class="cl cl--lg-fit hide--lg-max">
+                            <ul class="reset-list text-right--lg-min">
                                 <li><a class="b-phone" href="tel:+71234567890"><span class="b-phone__cod">+7 (123)</span> <span class="b-phone__num">456-78-90</span></a></li>
                                 <li><a class="b-email" href="mailto:email@dom.ru" target="_blank"><i class="icon-email"></i> email@dom.ru</a>
                                 </li>
@@ -74,11 +73,11 @@
                     </div>
                 </div>
             </header>
-            <!-- HEADER END -->
-            <!-- MAIN START -->
+            <!-- HEADER: END -->
+            <!-- MAIN: START -->
             <main class="s-main">
                 <div class="s-base">
-                    <div class="grid grid--xl-full">
+                    <div class="grid">     
                         <div class="b-breadcrumb">
                             <ul class="b-breadcrumb__list">
                                 <li class="b-breadcrumb__item"><a class="b-breadcrumb__link" href="#">Главная</a>
@@ -91,7 +90,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <h1>Title</h1>
+                        <h1>Title      </h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <form class="form form--default">
                             <div class="form__group">
@@ -114,8 +113,8 @@
                     </div>
                 </div>
             </main>
-            <!-- MAIN END -->
-            <!-- FOOTER START -->
+            <!-- MAIN: END -->
+            <!-- FOOTER: START -->
             <footer class="s-footer s-base">
                 <div class="grid">
                     <div class="rw">
@@ -128,9 +127,9 @@
                     </div>
                 </div>
             </footer>
-            <!-- FOOTER END -->
+            <!-- FOOTER: END -->
         </div>
-        <!-- MODALS START -->
+        <!-- MODALS: START -->
         <div class="modals-wrap hidden">
             <div class="modall modall--form" id="id_1">
                 <div class="modall__content">
@@ -162,11 +161,10 @@
                 </div>
             </div>
         </div>
-        <!-- MODALS END -->
-
+        <!-- MODALS: END -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- build:js js/vendors.min.js -->
 <!-- bower:js -->
-<script src="/bower_components/jquery/dist/jquery.js"></script>
 <!-- endbower -->
         <!-- endbuild -->
         <script src="js/theme.js?rev=@@hash"></script>

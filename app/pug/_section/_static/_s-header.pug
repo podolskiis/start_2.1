@@ -1,18 +1,18 @@
 header.s-header.s-base
   .grid
-    .rw.rw--md-middle
-      .cl.cl--md-fit.cl--xs-fill
+    .rw.rw--lg-middle
+      .cl.cl--lg-fit.cl--xs-fill
         +b-logo('logo.png')
-      .cl.cl--md-fill.cl--xs-fit
-        .md-show
-          .rw.rw--md-center.rw--md-content
+      .cl.cl--lg-fill.cl--xs-fit
+        .hide--lg-max
+          .rw.rw--lg-center.rw--lg-content
             .cl
               +b-multiMenu(menu_main,'b-main-menu','submenu')
-        .md-hide.float-right
+        .hide--lg-min.float-right
           button(data-bars="btn" aria-hidden="true").btn
             | ☰
-      .cl.cl--md-fit
-        ul.reset-list
+      .cl.cl--lg-fit.hide--lg-max
+        ul.reset-list.text-right--lg-min
           li
             a.b-phone(href="tel:+71234567890")
               span.b-phone__cod

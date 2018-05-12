@@ -7,17 +7,46 @@
   }
 }
 
-@mixin gutter-top($size: $gutter_base) {
+@mixin gutter-y($size: $gutter_base) {
   margin-top: -$size;
   > * {
     margin-top: $size;
   }
 }
 
-@mixin gutter-left($size: $gutter_base) {
+@mixin gutter-x($size: $gutter_base) {
   margin-left: -$size;
   > * {
     margin-left: $size;
+  }
+}
+
+@mixin gutter-rw($gutter: $gutter_base) {
+  $gutterLR: $gutter/2;
+  margin-top: -$gutter;
+  margin-left: -$gutterLR;
+  margin-right: -$gutterLR;
+  > * {
+    padding-top: $gutter;
+    padding-left: $gutterLR;
+    padding-right: $gutterLR;
+  }
+}
+
+@mixin gutter-rw-y($gutter: $gutter_base) {
+  margin-top: -$gutter;
+  > * {
+    padding-top: $gutter;
+  }
+}
+
+@mixin gutter-rw-x($gutter: $gutter_base) {
+  $gutterLR: $gutter/2;
+  margin-left: -$gutterLR;
+  margin-right: -$gutterLR;
+  > * {
+    padding-left: $gutterLR;
+    padding-right: $gutterLR;
   }
 }
 
@@ -29,33 +58,3 @@
     }
   }
 }
-
-@mixin gutter-row($gutter: $gutter_base) {
-  $gutterLR: $gutter/2;
-  margin-top: -$gutter;
-  margin-left: -$gutterLR;
-  margin-right: -$gutterLR;
-  > * {
-    padding-top: $gutter;
-    padding-left: $gutterLR;
-    padding-right: $gutterLR;
-  }
-}
-
-@mixin gutter-row-top($gutter: $gutter_base) {
-  margin-top: -$gutter;
-  > * {
-    padding-top: $gutter;
-  }
-}
-
-@mixin gutter-row-left($gutter: $gutter_base) {
-  $gutterLR: $gutter/2;
-  margin-left: -$gutterLR;
-  margin-right: -$gutterLR;
-  > * {
-    padding-left: $gutterLR;
-    padding-right: $gutterLR;
-  }
-}
- 

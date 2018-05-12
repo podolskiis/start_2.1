@@ -43,16 +43,17 @@ $breakpoints-max-width: (
 // Number of columns
 $columns: 12 !default;
 
-// Grid base gutter of columns
+
+// GRID BASE GUTTER OF COLUMNS
 // 15px 0.9375rem | 16px 1rem | 20px 1.25rem | 30px 1.875rem | 40px 2.5rem
-$grid-gutter: $gutter_base;
+$grid-gutter: $grid-gutter;
 $grid-gutter-sm: 20px;
 @if $fix_width_site {
   $grid-gutter-sm: false;
 }
 
 
-// Naming - BEM
+// NAMING - BEM
 // Block
 $b-grid: 'grid';
 $b-row:  'rw';

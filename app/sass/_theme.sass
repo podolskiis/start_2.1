@@ -7,7 +7,6 @@
   background: #9ACD32
 
 
-
 .b-title
 .b-logo
   margin: 0
@@ -63,9 +62,11 @@
       padding: 10px 15px
 .b-breadcrumb
   &__list
-    +row-flex
-    +gutter-top(5px)
+    +reset-list
+    +gutter-y(5px)
     margin: 0 0 15px
+    display: flex
+    flex-flow: row wrap
   &__item
     &::before
       content: '|'
@@ -74,7 +75,7 @@
       display: none
   &__link
   &__span
-  @media($max-md)
+  @media($max-lg)
     display: none
 .b-phone
   text-decoration: none
@@ -92,8 +93,4 @@
   @media($min-md)
     padding: 50px 0
 .s-header
-  a
-    &:hover
 .s-footer
-  a
-    &:hover

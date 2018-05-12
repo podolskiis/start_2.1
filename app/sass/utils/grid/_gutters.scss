@@ -1,0 +1,22 @@
+// Gutter row maps
+$gutter-size-map: $gutter-size-map;
+
+@mixin gutter-generator($breakpoint) {
+  @each $gutter-size in $gutter-size-map {
+    $sfx: if($gutter-size == $grid-gutter, 'base', '#{$gutter-size}');
+    $gutter-size: if($gutter-size == $grid-gutter, $grid-gutter, $gutter-size);
+    @each $gutter-suffix in 'gutter', 'gutter-x', 'gutter-y' {
+      [class~='#{$b-row}--#{$breakpoint}-#{$gutter-suffix}-#{$sfx}'] {
+        @if $gutter-suffix == 'gutter' {
+          @include gutter-rw($gutter-size);
+        }
+        @else if $gutter-suffix == 'gutter-x' {
+          @include gutter-rw-x($gutter-size);
+        }
+        @else if $gutter-suffix == 'gutter-y' {
+          @include gutter-rw-y($gutter-size);
+        }
+      }
+    }
+  }
+}

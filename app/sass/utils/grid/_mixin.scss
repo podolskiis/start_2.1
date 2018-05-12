@@ -1,50 +1,24 @@
-// GRID-GUTTER
-@mixin grid-gutter($element) {
-  @mixin gutter($gt) {
-    @if $element == $b-row {
-      margin-top: -$gt;
-      margin-left: -$gt/2;
-      margin-right: -$gt/2;
-    }
-    @else if $element == '#{$b-row}-gutter-bottom-none' {
-      padding: 0 $gt/2 0 $gt/2;
-    }
-    @else if $element == '#{$b-row}-gutter-between-none' {
-      padding: 0 0 $gt 0;
-    }
-    @else if $element == $b-col {
-      padding: $gt $gt/2 0 $gt/2;
-    }
-  }
-  @include gutter($grid-gutter);
-  @if $grid-gutter-sm {
-    @media($max-sm) {
-      @include gutter($grid-gutter-sm);
-    }
-  }
-}
-
-
 // GRID-GENERATOR
-@mixin media-generator($suffix) {
-  @include grid-generator($suffix);
-  @include row-generator($suffix);
-  @include column-generator($suffix);
-  @include helpers-generator($suffix, $resize: 'min');
+@mixin media-generator($breakpoint) {
+  @include grid-generator($breakpoint);
+  @include row-generator($breakpoint);
+  @include col-generator($breakpoint);
+  @include gutter-generator($breakpoint);
+  @include help-generator($breakpoint, $resize: 'min');
 }
 
 @mixin grid-init {
-  @each $suffix, $width in $breakpoints {
+  @each $breakpoint, $width in $breakpoints {
     @if ($width > 0) {
       @media (min-width: $width) {
-        @include media-generator($suffix);
+        @include media-generator($breakpoint);
       }
       @media (max-width: $width - 1) {
-        @include helpers-generator($suffix, $resize: 'max');
+        @include help-generator($breakpoint, $resize: 'max');
       }
     }
     @else {
-      @include media-generator($suffix);
+      @include media-generator($breakpoint);
     }
   }
 }

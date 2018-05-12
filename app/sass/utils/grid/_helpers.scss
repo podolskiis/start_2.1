@@ -1,17 +1,39 @@
-@mixin helpers-generator($suffix, $resize: '') {
-  [class~="hide--#{$suffix}-#{$resize}"] {
-    display: none !important;
+$helpers-map:(
+  hide: (display: none),
+  text-left: (text-align: left),
+  text-right: (text-align: right),
+  text-center: (text-align: center),
+  w100p: (width: 100%),
+) !default;
+
+$spacing-map: (
+  mt: 'margin-top',
+  ml: 'margin-left',
+  mr: 'margin-right',
+  mb: 'margin-bottom',
+  pt: 'padding-top',
+  pl: 'padding-left',
+  pr: 'padding-right',
+  pb: 'padding-bottom',
+) !default;
+$spacing-size-map: $spacing-size-map;
+
+@mixin help-generator($breakpoint, $resize: null) {
+  $sfx: if($breakpoint == 'xs', null, "--#{$breakpoint}-#{$resize}");
+  // helpers-map
+  @each $class, $rules in $helpers-map {
+    [class~="#{$class}#{$sfx}"] {
+      @each $rule, $value in $rules {
+        #{$rule}: $value !important;
+      }
+    }
   }
-  [class~="text-left--#{$suffix}-#{$resize}"] {
-    text-align: left;
-  }
-  [class~="text-right--#{$suffix}-#{$resize}"] {
-    text-align: right;
-  }
-  [class~="text-center--#{$suffix}-#{$resize}"] {
-    text-align: center;
-  }
-  [class~="w100p--#{$suffix}-#{$resize}"] {
-    width: 100%;
+  // spacing-map
+  @each $spacing-class, $spacing-rule in $spacing-map {
+    @each $spacing-size in $spacing-size-map {
+      [class~="#{$spacing-class}-#{$spacing-size}#{$sfx}"] {
+        #{$spacing-rule}: $spacing-size !important;
+      }
+    }
   }
 }
