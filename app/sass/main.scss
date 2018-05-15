@@ -14,10 +14,9 @@
 @import 'base/typography';
 @import 'base/base';
 
-@import 'components/buttons';
-@import 'components/placeholders';
-@import 'components/forms';
-// @import 'components/icon/import';
-// @import 'components/fancybox';
+@import 'components/button/core';
+@import 'components/form/core';
+@import 'components/icon/core';
+// @import 'components/fancybox/core';
 
 @import 'theme';

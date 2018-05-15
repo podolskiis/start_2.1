@@ -6,8 +6,12 @@ block vars
   - hide_bot = 1
 block content
   .s-base
-    .grid      
-      +b-breadcrumb(['Главная','Категория','Статья','Статья2'])      
+    .grid
+      span.bn(data-fancybox data-animation-duration="500" data-src="#id_1")
+        | О компании
+      <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">YouTube video</a>
+    .grid
+      +b-breadcrumb(['Главная','Категория','Заголовок статьи'])      
       h1
         | Title      
       - for (var x = 1; x <= 1; x++)
@@ -26,3 +30,4 @@ block content
         .form__group.form__group--bn
           button(type="submit").bn.bn--default
             | submit
+            i.fas.fa-angle-right.icon.icon--layout-right

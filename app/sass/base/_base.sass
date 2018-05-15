@@ -2,25 +2,25 @@ body
   margin: 0
   padding: 0
   background: #fff
-  font-family: $ff_base
-  font-size: $fz_base
-  font-weight: $fw_base
-  line-height: $lh_base
-  color: $fc_base
+  font-family: $ff-base
+  font-size: $fz-base
+  font-weight: $fw-base
+  line-height: $lh-base
+  color: $color-1
 
 html, body
-  @if $fix_width_site
-    min-width: ($fix_width_site + $grid-gutter)
+  @if $fix-width-site
+    min-width: ($fix-width-site + $grid-gutter)
   // @else
     min-width: 300px
 
 .grid
-  @if $fix_width_site
-    width: ($fix_width_site + $grid-gutter) !important
+  @if $fix-width-site
+    width: ($fix-width-site + $grid-gutter) !important
     max-width: none !important
   @else
     @media(max-width: 479px)
-      padding: 0 10px
+      padding: 0 $grid-gutter-sm/2
   // @if $maxFull
     @media($min-xl)
       &[class~="grid--xl-full"]

@@ -1,4 +1,4 @@
-@mixin gutter($size: $gutter_base) {
+@mixin gutter($size: $gutter-base) {
   margin-top: -$size;
   margin-left: -$size;
   > * {
@@ -7,21 +7,21 @@
   }
 }
 
-@mixin gutter-y($size: $gutter_base) {
+@mixin gutter-y($size: $gutter-base) {
   margin-top: -$size;
   > * {
     margin-top: $size;
   }
 }
 
-@mixin gutter-x($size: $gutter_base) {
+@mixin gutter-x($size: $gutter-base) {
   margin-left: -$size;
   > * {
     margin-left: $size;
   }
 }
 
-@mixin gutter-rw($gutter: $gutter_base) {
+@mixin gutter-rw($gutter: $gutter-base) {
   $gutterLR: $gutter/2;
   margin-top: -$gutter;
   margin-left: -$gutterLR;
@@ -33,14 +33,14 @@
   }
 }
 
-@mixin gutter-rw-y($gutter: $gutter_base) {
+@mixin gutter-rw-y($gutter: $gutter-base) {
   margin-top: -$gutter;
   > * {
     padding-top: $gutter;
   }
 }
 
-@mixin gutter-rw-x($gutter: $gutter_base) {
+@mixin gutter-rw-x($gutter: $gutter-base) {
   $gutterLR: $gutter/2;
   margin-left: -$gutterLR;
   margin-right: -$gutterLR;
@@ -50,7 +50,7 @@
   }
 }
 
-@mixin gutter-lines($size: $gutter_base) {
+@mixin gutter-lines($size: $gutter-base) {
   > * {
     margin-top: $size;
     &:first-child {

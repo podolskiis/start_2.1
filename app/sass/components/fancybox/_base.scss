@@ -1,0 +1,44 @@
+& {
+  $root: &;
+  margin: 0;
+  padding: 0;
+  background: none;
+  &__close {
+    @include tsn-all;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    line-height: 1;
+    opacity: .5;
+    padding: 15px;
+    font-size: 125%;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    @include reset-in-mg;
+  }
+
+  // ANIMATION
+  transform: translateY(-80px);
+  transition: all .5s;
+  .fancybox-slide--current & {
+    transform: translateY(0);
+    transition-duration: .3s;
+  }
+
+  @media($max-md) {
+    width: 100%;
+    min-height: 100%;
+    padding: 30px $grid-gutter-sm/2;
+    &__close {
+      padding: 15px $grid-gutter-sm/2;
+    }
+    &.fancybox-content {
+      margin: 0;
+    }
+  }
+}

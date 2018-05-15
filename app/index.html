@@ -13,6 +13,7 @@
 <!-- bower:css -->
 <!-- endbower -->
         <!-- endbuild -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
         <link rel="stylesheet" href="css/theme.min.css?rev=@@hash">
         <link rel="stylesheet" href="css/custom.css">
         <!--[if lt IE 10]><link href="//rawgit.com/codefucker/finalReject/master/reject/reject.css" rel="stylesheet"/><script src="//rawgit.com/codefucker/finalReject/master/reject/reject.min.js"></script><![endif]-->
@@ -30,21 +31,21 @@
                             <div class="hide--lg-max">
                                 <div class="rw rw--lg-center rw--lg-content">
                                     <div class="cl">
-                                        <nav class="b-main-menu">
-                                            <ul class="b-main-menu__list">
-                                                <li class="b-main-menu__item"><a class="b-main-menu__link" href="index.html"><span>Главная</span></a>
+                                        <nav class="b-menu-main">
+                                            <ul class="b-menu-main__list">
+                                                <li class="b-menu-main__item"><a class="b-menu-main__link" href="index.html"><span>Главная</span></a>
                                                 </li>
-                                                <li class="b-main-menu__item b-main-menu__item_dropdown active"><a class="b-main-menu__link" href="about.html"><span>О компании</span></a>
-                                                    <div class="b-main-menu__submenu">
-                                                        <ul class="b-main-menu-submenu">
-                                                            <li class="b-main-menu-submenu__item"><a class="b-main-menu-submenu__link" href="2.1.html"><span>menu-item_2.1</span></a>
+                                                <li class="b-menu-main__item b-menu-main__item--dropdown active"><a class="b-menu-main__link" href="about.html"><span>О компании</span></a>
+                                                    <div class="b-menu-main__submenu b-menu-main-submenu">
+                                                        <ul class="b-menu-main-submenu__list">
+                                                            <li class="b-menu-main-submenu__item"><a class="b-menu-main-submenu__link" href="2.1.html"><span>menu-item_2.1</span></a>
                                                             </li>
-                                                            <li class="b-main-menu-submenu__item"><a class="b-main-menu-submenu__link" href="2.2.html"><span>menu-item_2.2</span></a>
-                                                                <div class="b-main-menu__submenu">
-                                                                    <ul class="b-main-menu-submenu">
-                                                                        <li class="b-main-menu-submenu__item"><a class="b-main-menu-submenu__link" href="3.1.html"><span>menu-item_3.1</span></a>
+                                                            <li class="b-menu-main-submenu__item"><a class="b-menu-main-submenu__link" href="2.2.html"><span>menu-item_2.2</span></a>
+                                                                <div class="b-menu-main__submenu b-menu-main-submenu">
+                                                                    <ul class="b-menu-main-submenu__list">
+                                                                        <li class="b-menu-main-submenu__item"><a class="b-menu-main-submenu__link" href="3.1.html"><span>menu-item_3.1</span></a>
                                                                         </li>
-                                                                        <li class="b-main-menu-submenu__item"><a class="b-main-menu-submenu__link" href="3.2.html"><span>menu-item_3.2</span></a>
+                                                                        <li class="b-menu-main-submenu__item"><a class="b-menu-main-submenu__link" href="3.2.html"><span>menu-item_3.2</span></a>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -52,7 +53,7 @@
                                                         </ul>
                                                     </div>
                                                 </li>
-                                                <li class="b-main-menu__item"><a class="b-main-menu__link" href="contacts.html"><span>Контакты</span></a>
+                                                <li class="b-menu-main__item"><a class="b-menu-main__link" href="contacts.html"><span>Контакты</span></a>
                                                 </li>
                                             </ul>
                                         </nav>
@@ -77,16 +78,15 @@
             <!-- MAIN: START -->
             <main class="s-main">
                 <div class="s-base">
-                    <div class="grid">     
+                    <div class="grid"><span class="bn" data-fancybox data-animation-duration="500" data-src="#id_1">О компании</span><a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">YouTube video</a></div>
+                    <div class="grid">
                         <div class="b-breadcrumb">
                             <ul class="b-breadcrumb__list">
                                 <li class="b-breadcrumb__item"><a class="b-breadcrumb__link" href="#">Главная</a>
                                 </li>
                                 <li class="b-breadcrumb__item"><a class="b-breadcrumb__link" href="#">Категория</a>
                                 </li>
-                                <li class="b-breadcrumb__item"><a class="b-breadcrumb__link" href="#">Статья</a>
-                                </li>
-                                <li class="b-breadcrumb__item"><span class="b-breadcrumb__span">Статья2</span>
+                                <li class="b-breadcrumb__item"><span class="b-breadcrumb__span">Заголовок статьи</span>
                                 </li>
                             </ul>
                         </div>
@@ -107,7 +107,7 @@
                                 <textarea class="form__field w100p" rows="5" name="msg" placeholder="Сообщение" required></textarea>
                             </div>
                             <div class="form__group form__group--bn">
-                                <button class="bn bn--default" type="submit">submit</button>
+                                <button class="bn bn--default" type="submit">submit<i class="fas fa-angle-right icon icon--layout-right"></i></button>
                             </div>
                         </form>
                     </div>
@@ -131,7 +131,7 @@
         </div>
         <!-- MODALS: START -->
         <div class="modals-wrap hidden">
-            <div class="modall modall--form" id="id_1">
+            <div class="modall modall--default wrap--w600" id="id_1">
                 <div class="modall__content">
                     <h3 class="modall__title">title</h3>
                     <form class="form form--default">
@@ -147,13 +147,13 @@
                         <div class="form__group">
                             <textarea class="form__field w100p" rows="5" name="msg" placeholder="Сообщение" required></textarea>
                         </div>
-                        <div class="form__group form__group--btn">
-                            <button class="btn btn--default" type="submit">submit</button>
+                        <div class="form__group form__group--bn">
+                            <button class="bn bn--default" type="submit">submit</button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="modall modall--text" id="id_2">
+            <div class="modall modall--default modall--text wrap--w1024" id="id_2">
                 <div class="modall__content">
                     <h3 class="modall__title">title</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis cum voluptates sed commodi maxime quidem magnam, non assumenda inventore in nemo, dolore, voluptas quam. Itaque quos dolorem architecto deserunt, adipisci!</p>

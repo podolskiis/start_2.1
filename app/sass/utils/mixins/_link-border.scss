@@ -1,4 +1,4 @@
-@mixin link-border($type: dotted, $color: $tm_color_link_a, $hover: $tm_color_link_b) {
+@mixin link-border($type: dotted, $color: $link-color-base, $hover: $link-hover-color-base) {
   border-width: 0 0 1px;
   display: inline-block;
   text-decoration: none !important;

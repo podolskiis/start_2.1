@@ -1,5 +1,5 @@
 // Fixed Width of the site | 980px | false
-$fix_width_site: false;
+$fix-width-site: false;
 
 // Breakpoints Window
 $sm: 576px ;
@@ -47,8 +47,8 @@ $columns: 12 !default;
 // GRID BASE GUTTER OF COLUMNS
 // 15px 0.9375rem | 16px 1rem | 20px 1.25rem | 30px 1.875rem | 40px 2.5rem
 $grid-gutter: $grid-gutter;
-$grid-gutter-sm: 20px;
-@if $fix_width_site {
+$grid-gutter-sm: $grid-gutter-sm;
+@if $fix-width-site {
   $grid-gutter-sm: false;
 }
 

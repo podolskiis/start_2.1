@@ -12,17 +12,6 @@ var // GLOBAL VARIABLES
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // NAME
 (function(){
   var

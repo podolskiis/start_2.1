@@ -1,27 +1,30 @@
 // FONT
-$ff_base: 'Roboto', sans-serif;
-$fz_base: 16px;
-$fw_base: 400;
-$lh_base: 1.3;
-$fc_base: #333;
+$ff-base: 'Roboto', sans-serif !default;
+$fz-base: 16px !default;
+$fw-base: 400  !default;
+$lh-base: 1.3  !default;
 
 // GUTTER-SPACING
-$gutter_base:   30px;
-$gutter_p_base: 15px;
-$grid-gutter: $gutter_base;
+$gutter-base: 30px !default;
+$gutter-item: 15px !default;
+$grid-gutter: $gutter-base !default;
+$grid-gutter-sm: 20px !default;
+
 $gutter-size-map: (
-  $gutter_base,0,5px,10px,15px,20px,25px,
+  $gutter-base,0,5px,10px,15px,20px,25px,
 ) !default;
 $spacing-size-map: (
-  $gutter_base,0,5px,10px,15px,20px,25px,
+  $gutter-base,0,5px,10px,15px,20px,25px,
 ) !default;
 
-// COLOR
-$color_1: #c00;
-$color_2: #9ACD32;
+// COLORS
+$color-1: #333    !default;
+$color-2: #c00    !default;
+$color-3: #9ACD32 !default;
+$color-4: #0275d8 !default;
 
-$link_color_base:       #0275d8;
-$link_hover_color_base: darken($link_color_base, 15%);
+$link-color-base:       $color-4 !default;
+$link-hover-color-base: darken($link-color-base, 15%) !default;
 
 $bg-color: (
   white:        #fff,
@@ -31,37 +34,34 @@ $bg-color: (
 $text-color: (
   white:        #fff,
   black:        #000,
-  accent:       $color_1,
-  link:         $link_color_base,
+  gray:         #ccc,
+  accent:       $color-2,
+  link:         $link-color-base,
 ) !default;
-$array-colors: ($bg-color, $text-color);
+$array-colors: ($bg-color, $text-color) !default;
 
-// TRANSITION
-$tsn_duration_base: .2s;
-$tsn_duration_mid:  .3s;
-$tsn_duration_slow: .5s;
-
-$box_shadow_base: 1px 1px 5px rgba(#000, .3);
-$border_radius_base: 3px;
+$duration-base:      .2s !default;
+$box-shadow-base:    1px 1px 5px rgba(#000, .3) !default;
+$border-radius-base: 4px !default;
 
 // FORM ELEMENTS
-$placeholder_color:        #aaa;
-$placeholder_focus_color:  #ddd;
-$input_font_color:         $fc_base;
-$input_bg_color:           #fff;
-$input_bg_focus_color:     #fff;
-$input_border_color:       #ddd;
-$input_border_focus_color: #aaa;
-$input_border_radius:      0;
+$placeholder-color:        #aaa !default;
+$placeholder-focus-color:  #ddd !default;
+$input-font-color:         $color-1 !default;
+$input-bg-color:           #fff !default;
+$input-bg-focus-color:     #fff !default;
+$input-border-color:       #ddd !default;
+$input-border-focus-color: #aaa !default;
+$input-border-radius:      0 !default;
 
-$input_font_size:          $fz_base;
-$input_height:             36px;
-$input_padding_x:          10px;
-$input_padding_y:          5px;
-$input_border_width:       1px;
-$form_group_gutter: $gutter_p_base;
+$input-font-size:          $fz-base !default;
+$input-height:             36px !default;
+$input-padding-x:          10px !default;
+$input-padding-y:          5px !default;
+$input-border-width:       1px !default;
+$form-group-spacing:        $gutter-item !default;
 
 // WRAP
 $wrap: (
-  800, 710, 440, 300
+  600,900,1024,
 ) !default;

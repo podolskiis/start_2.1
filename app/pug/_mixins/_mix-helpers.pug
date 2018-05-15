@@ -1,15 +1,16 @@
 //- MENU
 mixin b-multiMenu(data, navСlass, dropdown)
   //- EXAMPLE: +b-multiMenu(menu_obj, 'class-menu','submenu')
+  - var subСlass = navСlass + '-submenu'
   mixin multiSubmenu(data, navСlass, count)
     - count++
-    ul(class=navСlass+'-submenu')
+    ul(class=subСlass+'__list')
       each item in data
-        li(class=navСlass+'-submenu__item', class={active: activeMenu[count] === item.val})
-          a(href=item.url, class=navСlass+'-submenu__link')
+        li(class=subСlass+'__item', class={active: activeMenu[count] === item.val})
+          a(href=item.url, class=subСlass+'__link')
             span= item.val
           if (item.submenu)
-            div(class=navСlass+'__submenu')
+            div(class=navСlass+'__submenu ' + subСlass)
               +multiSubmenu(item.submenu, navСlass, count)
   nav(class=navСlass)&attributes(attributes)
     ul(class=navСlass+'__list')
@@ -17,12 +18,12 @@ mixin b-multiMenu(data, navСlass, dropdown)
       each item in data
         - var itemClasses = [navСlass+'__item']
         if (item.submenu && dropdown)
-          - itemClasses.push(itemClasses[0] + '_dropdown')
+          - itemClasses.push(itemClasses[0] + '--dropdown')
         li( class=itemClasses, class={active: activeMenu[count] === item.val} )
           a(href=item.url, class=navСlass+'__link')
             span= item.val
           if (item.submenu && dropdown)
-            div(class=navСlass+'__submenu')
+            div(class=navСlass + '__submenu ' + subСlass)
               +multiSubmenu(item.submenu, navСlass, count)
 
 mixin b-menu-data(data)

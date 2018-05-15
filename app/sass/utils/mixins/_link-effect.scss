@@ -1,4 +1,4 @@
-@mixin link-effect-line-center($z:1px, $color:$tm_color_link_b, $tsn:.3) {
+@mixin link-effect-line-center($z: 1px, $color: $link-hover-color-base, $tsn: .3) {
   position: relative;
   text-decoration: none;
   @include tsn($tsn);

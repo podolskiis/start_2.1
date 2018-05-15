@@ -1,0 +1,21 @@
+// FORM ELEMENTS
+$placeholder-color:          rgba(#fff, 0.7);
+$placeholder-focus-color:    transparent;
+$input-font-color:           #fff;
+
+$input-bg-color:             #333;
+$input-bg-focus-color:       gray;
+
+$input-border-color:         gray;
+$input-border-focus-color:   #333;
+$input-border-radius:        0;
+
+
+$input-height:               44px;
+$input-font-size:            $input-font-size;
+$input-padding-x:            $input-padding-x;
+$input-padding-y:            $input-padding-y;
+$input-border-width:         5px;
+$form-group-gutter:          $form-group-spacing;
+
+$input-border-color-error:   red;

@@ -1,0 +1,36 @@
+// BASE
+&--base {
+  border: 1px solid transparent;
+  border-radius: $border-radius-base;
+  font-family: $ff-base;
+  font-size: $fz-base;
+  padding: 0 $input-padding-x;
+  @include btn-size(36px);
+}
+
+// THEME
+&--default {
+  @extend #{$root}--base;
+  background: $link-color-base;
+  color: #fff;
+  &:hover {
+    background: $link-hover-color-base;
+  }
+}
+
+&--outline-default {
+  @extend #{$root}--base;
+  border-color: $link-color-base;
+  color: $link-color-base;
+  &:hover {
+    background: $link-color-base;
+    color: #fff;
+  }
+}
+
+&--link {
+  color: $link-color-base;
+  &:hover {
+    color: $link-hover-color-base;
+  }
+}

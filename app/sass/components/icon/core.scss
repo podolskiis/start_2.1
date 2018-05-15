@@ -1,6 +1,7 @@
-$spacingY: 8px;
+@import 'var';
+@import 'icomoon';
 
-.icon {
+#{$b} {
   &--middle {
     display: inline-block;
     vertical-align: middle;
