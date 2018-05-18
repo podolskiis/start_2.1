@@ -1,67 +1,67 @@
 // FONT
-$ff-base: 'Roboto', sans-serif !default;
-$fz-base: 16px !default;
-$fw-base: 400  !default;
-$lh-base: 1.3  !default;
+$ff-base: 'Roboto', sans-serif;
+$fz-base: 16px;
+$fw-base: 400 ;
+$lh-base: 1.3 ;
 
 // GUTTER-SPACING
-$gutter-base: 30px !default;
-$gutter-item: 15px !default;
-$grid-gutter: $gutter-base !default;
-$grid-gutter-sm: 20px !default;
+$gutter-base: 30px;
+$gutter-item: 15px;
+$grid-gutter: $gutter-base;
+$grid-gutter-sm: 20px;
 
 $gutter-size-map: (
   $gutter-base,0,5px,10px,15px,20px,25px,
-) !default;
+);
 $spacing-size-map: (
   $gutter-base,0,5px,10px,15px,20px,25px,
-) !default;
+);
 
 // COLORS
-$color-1: #333    !default;
-$color-2: #c00    !default;
-$color-3: #9ACD32 !default;
-$color-4: #0275d8 !default;
+$color-1: #333333;
+$color-2: #cc0000;
+$color-3: #9ACD32;
+$color-4: #0275d8;
 
-$link-color-base:       $color-4 !default;
-$link-hover-color-base: darken($link-color-base, 15%) !default;
+$link-color-base:       $color-4;
+$link-hover-color-base: darken($link-color-base, 15%);
 
 $bg-color: (
   white:        #fff,
   black:        #000,
   gray:         #ccc,
-) !default;
+);
 $text-color: (
   white:        #fff,
   black:        #000,
   gray:         #ccc,
   accent:       $color-2,
   link:         $link-color-base,
-) !default;
-$array-colors: ($bg-color, $text-color) !default;
+);
+$array-colors: ($bg-color, $text-color);
 
-$duration-base:      .2s !default;
-$box-shadow-base:    1px 1px 5px rgba(#000, .3) !default;
-$border-radius-base: 4px !default;
+$duration-base:      .2s;
+$box-shadow-base:    1px 1px 5px rgba(#000, .3);
+$border-radius-base: 4px;
 
 // FORM ELEMENTS
-$placeholder-color:        #aaa !default;
-$placeholder-focus-color:  #ddd !default;
-$input-font-color:         $color-1 !default;
-$input-bg-color:           #fff !default;
-$input-bg-focus-color:     #fff !default;
-$input-border-color:       #ddd !default;
-$input-border-focus-color: #aaa !default;
-$input-border-radius:      0 !default;
+$placeholder-color:        #aaa;
+$placeholder-focus-color:  #ddd;
+$input-font-color:         $color-1;
+$input-bg-color:           #fff;
+$input-bg-focus-color:     #fff;
+$input-border-color:       #ddd;
+$input-border-focus-color: #aaa;
+$input-border-radius:      0;
 
-$input-font-size:          $fz-base !default;
-$input-height:             36px !default;
-$input-padding-x:          10px !default;
-$input-padding-y:          5px !default;
-$input-border-width:       1px !default;
-$form-group-spacing:        $gutter-item !default;
+$input-font-size:          $fz-base;
+$input-height:             36px;
+$input-padding-x:          10px;
+$input-padding-y:          5px;
+$input-border-width:       1px;
+$form-group-spacing:       $gutter-item;
 
 // WRAP
 $wrap: (
   600,900,1024,
-) !default;
+);
