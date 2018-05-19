@@ -42,7 +42,7 @@ $array-colors: ($bg-color, $text-color);
 
 $duration-base:      .2s;
 $box-shadow-base:    1px 1px 5px rgba(#000, .3);
-$border-radius-base: 4px;
+$border-radius-base: 2px;
 
 // FORM ELEMENTS
 $placeholder-color:        #aaa;
@@ -52,12 +52,12 @@ $input-bg-color:           #fff;
 $input-bg-focus-color:     #fff;
 $input-border-color:       #ddd;
 $input-border-focus-color: #aaa;
-$input-border-radius:      0;
+$input-border-radius:      $border-radius-base;
 
 $input-font-size:          $fz-base;
-$input-height:             36px;
+$input-height:             40px;
 $input-padding-x:          10px;
-$input-padding-y:          5px;
+$input-padding-y:          10px;
 $input-border-width:       1px;
 $form-group-spacing:       $gutter-item;
 

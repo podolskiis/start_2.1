@@ -1,0 +1,42 @@
+@import 'var';
+
+.b-check {
+  $root: &;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  &__row {
+    display: flex;
+  }
+  &__input {
+    @include field-magic;
+  }
+  &__field {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -1px;
+  }
+  &__checked {
+    display: block;
+    &::before {
+      content: "";
+      position: absolute;
+      opacity: 0;
+    }
+  }
+  &__text {
+    cursor: default;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  // checked
+  &__input:checked {
+    + #{$root}__checked:before {
+      opacity: 1;
+    }
+  }
+
+  @import 'theme/checkbox-tm-1/layout';
+  @import 'theme/radio-tm-1/layout';
+}

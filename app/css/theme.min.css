@@ -1448,12 +1448,12 @@ img {
 .bn--default,
 .bn--outline-default {
     border: 1px solid transparent;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     padding: 0 10px;
-    line-height: 34px;
+    line-height: 38px;
 }
 
 .bn--default {
@@ -1510,90 +1510,90 @@ img {
     display: block;
 }
 
-.form--default .form__field {
+.form--tm-1 .form__field {
     letter-spacing: inherit;
-    padding: 5px 10px;
-    line-height: 24px;
-    height: 36px;
+    padding: 10px 10px;
+    line-height: 18px;
+    height: 40px;
     border-width: 1px;
     border-style: solid;
     background-color: #fff;
     border-color: #ddd;
-    -webkit-border-radius: 0;
-    border-radius: 0;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
     font-size: 16px;
     color: #333333;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
 
-.form--default .form__field::-webkit-input-placeholder {
+.form--tm-1 .form__field::-webkit-input-placeholder {
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
     color: #aaa;
 }
 
-.form--default .form__field::-moz-placeholder {
+.form--tm-1 .form__field::-moz-placeholder {
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
     color: #aaa;
 }
 
-.form--default .form__field:-ms-input-placeholder {
+.form--tm-1 .form__field:-ms-input-placeholder {
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
     color: #aaa;
 }
 
-.form--default .form__field::-ms-input-placeholder {
+.form--tm-1 .form__field::-ms-input-placeholder {
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
     color: #aaa;
 }
 
-.form--default .form__field::placeholder {
+.form--tm-1 .form__field::placeholder {
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
     color: #aaa;
 }
 
-.form--default .form__field:focus::-webkit-input-placeholder {
+.form--tm-1 .form__field:focus::-webkit-input-placeholder {
     color: transparent;
 }
 
-.form--default .form__field:focus::-moz-placeholder {
+.form--tm-1 .form__field:focus::-moz-placeholder {
     color: transparent;
 }
 
-.form--default .form__field:focus:-ms-input-placeholder {
+.form--tm-1 .form__field:focus:-ms-input-placeholder {
     color: transparent;
 }
 
-.form--default .form__field:focus::-ms-input-placeholder {
+.form--tm-1 .form__field:focus::-ms-input-placeholder {
     color: transparent;
 }
 
-.form--default .form__field:focus::placeholder {
+.form--tm-1 .form__field:focus::placeholder {
     color: transparent;
 }
 
-.form--default .form__field:focus,
-.form--default .form__field.focus {
+.form--tm-1 .form__field:focus,
+.form--tm-1 .form__field.focus {
     background-color: #fff;
     border-color: #aaa;
 }
 
-.form--default textarea.form__field {
+.form--tm-1 textarea.form__field {
     height: auto;
     min-height: 100px;
 }
 
-.form--default .form__label {
+.form--tm-1 .form__label {
     display: block;
     overflow: hidden;
     white-space: nowrap;
@@ -1602,23 +1602,23 @@ img {
     margin-bottom: 5px;
 }
 
-.form--default .form__label:last-child {
+.form--tm-1 .form__label:last-child {
     margin-bottom: 0;
 }
 
-.form--default .form__group {
+.form--tm-1 .form__group {
     margin-top: 15px;
 }
 
-.form--default .form__group:first-child {
+.form--tm-1 .form__group:first-child {
     margin-top: 0;
 }
 
-.form--default .form__group--bn {
+.form--tm-1 .form__group--bn {
     margin-top: 30px;
 }
 
-.form--default .b-input-icon {
+.form--tm-1 .b-input-icon {
     -webkit-transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
     -o-transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
@@ -1629,17 +1629,17 @@ img {
     padding: 0 !important;
 }
 
-.form--default .b-input-icon__field {
+.form--tm-1 .b-input-icon__field {
     letter-spacing: inherit;
-    padding: 5px 10px;
-    line-height: 24px;
-    height: 36px;
+    padding: 10px 10px;
+    line-height: 18px;
+    height: 40px;
     border-width: 1px;
     border-style: solid;
     background-color: #fff;
     border-color: #ddd;
-    -webkit-border-radius: 0;
-    border-radius: 0;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
     font-size: 16px;
     color: #333333;
     font-family: "Roboto", sans-serif;
@@ -1660,13 +1660,13 @@ img {
     max-width: calc(100%  + 2px);
 }
 
-.form--default .b-input-icon__field:focus,
-.form--default .b-input-icon__field.focus {
+.form--tm-1 .b-input-icon__field:focus,
+.form--tm-1 .b-input-icon__field.focus {
     background-color: #fff;
     border-color: #aaa;
 }
 
-.form--default .b-input-icon__icon {
+.form--tm-1 .b-input-icon__icon {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -1678,19 +1678,19 @@ img {
     font-weight: normal;
 }
 
-.form--default .b-input-icon__icon--over {
+.form--tm-1 .b-input-icon__icon--over {
     z-index: 2;
     cursor: pointer;
 }
 
-.form--default input.error,
-.form--default textarea.error {
+.form--tm-1 input.error,
+.form--tm-1 textarea.error {
     border-color: red !important;
     -webkit-box-shadow: 0 0 3px red !important;
     box-shadow: 0 0 3px red !important;
 }
 
-.form--default label.error {
+.form--tm-1 label.error {
     display: none !important;
 }
 
@@ -1706,6 +1706,153 @@ img {
 
 .icon--layout-right {
     margin-left: 8px;
+}
+
+.b-check {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+}
+
+.b-check__row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.b-check__input {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+}
+
+.b-check__field {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -1px;
+}
+
+.b-check__checked {
+    display: block;
+}
+
+.b-check__checked::before {
+    content: "";
+    position: absolute;
+    opacity: 0;
+}
+
+.b-check__text {
+    cursor: default;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.b-check__input:checked + .b-check__checked:before {
+    opacity: 1;
+}
+
+.b-check--checkbox-tm-1 .b-check__col:last-child {
+    margin-left: 10px;
+}
+
+.b-check--checkbox-tm-1 .b-check__checked {
+    -webkit-transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    -o-transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    width: 18px;
+    height: 18px;
+}
+
+.b-check--checkbox-tm-1 .b-check__checked::before {
+    -webkit-transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    -o-transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background-color: #ddd;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+}
+
+.b-check--checkbox-tm-1 .b-check__text {
+    font-size: 12px;
+}
+
+.b-check--checkbox-tm-1 .b-check__input:focus + .b-check__checked {
+    background-color: #fff;
+    border-color: #aaa;
+}
+
+.b-check--checkbox-tm-1 .b-check__input:focus + .b-check__checked:before {
+    background-color: #aaa;
+}
+
+.b-check--radio-tm-1 .b-check__col:last-child {
+    margin-left: 10px;
+}
+
+.b-check--radio-tm-1 .b-check__checked {
+    -webkit-transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    -o-transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+}
+
+.b-check--radio-tm-1 .b-check__checked::before {
+    -webkit-transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    -o-transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background-color: #ddd;
+    -webkit-border-radius: 49%;
+    border-radius: 49%;
+}
+
+.b-check--radio-tm-1 .b-check__text {
+    font-size: 12px;
+}
+
+.b-check--radio-tm-1 .b-check__input:focus + .b-check__checked {
+    background-color: #fff;
+    border-color: #aaa;
+}
+
+.b-check--radio-tm-1 .b-check__input:focus + .b-check__checked:before {
+    background-color: #aaa;
 }
 
 .s-header,

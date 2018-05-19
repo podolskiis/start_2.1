@@ -19,7 +19,6 @@
     height: auto;
     min-height: 100px;
   }
-
   // LABEL
   #{$root}__label {
     display: block;
@@ -31,7 +30,6 @@
       margin-bottom: 0;
     }
   }
-
   // GROUP
   #{$root}__group {
     margin-top: $form-group-gutter;
@@ -42,14 +40,12 @@
       margin-top: $form-group-gutter * 2;
     }
   }
-
   // INPUT-ICON
   .b-input-icon {
     @include field-icon;
     &__field {}
     &__icon {}
   }
-
   // VALIDATE
   input.error, textarea.error {
     border-color: $input-border-color-error !important;
@@ -58,5 +54,4 @@
   label.error {
     display: none !important;
   }
-
-} // END: CLASS MODIFIER
+}
