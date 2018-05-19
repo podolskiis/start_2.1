@@ -2,8 +2,7 @@
   "name": "project",
   "version": "1.0.0",
   "dependencies": {
-    "normalize-css": "latest",
-    "select2": "^4.0.5"
+    "normalize-css": "latest"
   },
   "overrides": {
     "fancybox": {
