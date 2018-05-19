@@ -40,21 +40,24 @@ $text-color: (
 );
 $array-colors: ($bg-color, $text-color);
 
-$duration-base:      .2s;
-$box-shadow-base:    1px 1px 5px rgba(#000, .3);
-$border-radius-base: 2px;
+$duration-base:         .2s;
+$border-radius-base:    3px;
+$box-shadow-below-base: 1px 1px 5px rgba(#000, .3);
+$box-shadow-above-base: 1px -1px 5px rgba(#000, .3);
 
 // FORM ELEMENTS
 $placeholder-color:        #aaa;
 $placeholder-focus-color:  #ddd;
-$input-font-color:         $color-1;
+
 $input-bg-color:           #fff;
 $input-bg-focus-color:     #fff;
 $input-border-color:       #ddd;
 $input-border-focus-color: #aaa;
 $input-border-radius:      $border-radius-base;
+$input-font-color:         $color-1;
 
 $input-font-size:          $fz-base;
+$input-font-weight:        400;
 $input-height:             40px;
 $input-padding-x:          10px;
 $input-padding-y:          10px;
