@@ -1694,20 +1694,6 @@ img {
     display: none !important;
 }
 
-.icon--middle {
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -.25em;
-}
-
-.icon--layout-left {
-    margin-right: 8px;
-}
-
-.icon--layout-right {
-    margin-left: 8px;
-}
-
 .b-check {
     display: inline-block;
     position: relative;
@@ -1853,6 +1839,20 @@ img {
 
 .b-check--radio-tm-1 .b-check__input:focus + .b-check__checked:before {
     background-color: #aaa;
+}
+
+.icon--middle {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -.25em;
+}
+
+.icon--layout-left {
+    margin-right: 8px;
+}
+
+.icon--layout-right {
+    margin-left: 8px;
 }
 
 .s-header,
