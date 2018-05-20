@@ -2,10 +2,14 @@
   "name": "project",
   "version": "1.0.0",
   "dependencies": {
-    "normalize-css": "latest"
+    "normalize-css": "latest",
+    "slick-carousel": "^1.8.1"
   },
   "overrides": {
     "fancybox": {
+      "dependencies": []
+    },
+    "slick-carousel": {
       "dependencies": []
     }
   }

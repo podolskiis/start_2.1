@@ -1,0 +1,102 @@
+&--horizontal-tm-1 {
+  $preview-gutter: 15px;
+  $preview-border: 3px;
+  $preview-color: $link-color-base;
+  $preview-hover-color: $link-hover-color-base;
+
+  #{$root}__for {
+    a[data-fancybox] {
+      cursor: zoom-in;
+    }
+  }
+
+  #{$root}__nav {
+    overflow: hidden;
+    margin-top: $preview-gutter;
+    padding: 0 30px;
+    @at-root {
+      .slick-dotted + & {
+        display: none;
+      }
+    }
+    img {
+      @include tsn-all;
+      opacity: .75;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    #{$root}__item {
+      position: relative;
+      &::after {
+        @include tsn-all;
+        border: $preview-border solid rgba(#000, 1);
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .slick-list {
+      margin-left: - $preview-gutter/2;
+      margin-right: - $preview-gutter/2;
+    }
+    .slick-slide {
+      & > * {
+        padding: 0 $preview-gutter/2;
+      }
+    }
+    .slick-current {
+      img {
+        opacity: 1;
+      }
+      #{$root}__item {
+        position: relative;
+        &::after {
+          border-color: $preview-color;
+        }
+      }
+    }
+    .slick-arrow {
+      font-size: 20px;
+      color: $preview-color;
+      &:hover {
+        color: $preview-hover-color;
+      }
+    }
+    &.slick-slider {
+      .slick-arrow {
+        &[class*="left"],&[class*="prev"] {
+          left: 0;
+        }
+        &[class*="right"],&[class*="next"] {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    margin: 30px 0 0;
+    button {
+      @include z(14px);
+      border-radius: 50%;
+      background: $color-1;
+      margin: 0 12px;
+    }
+    .slick-active {
+      button {
+        background: $preview-color;
+      }
+    }
+  }
+
+  // больше отступа в теле статьи
+  .b-entry-text & {
+    margin: ems($gutter-item * 3) 0;
+  }
+}

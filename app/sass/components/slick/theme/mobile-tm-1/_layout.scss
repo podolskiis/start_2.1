@@ -1,0 +1,33 @@
+&--mobile-tm-1 {
+  $preview-gutter: $gutter-base/2;
+  $preview-color: $link-color-base;
+
+  margin-left: -$preview-gutter;
+  margin-right: -$preview-gutter;
+
+  .slick-slide {
+    & > * {
+      padding: 0 $preview-gutter;
+    }
+  }
+
+  .slick-dots {
+    margin: $preview-gutter 0 0;
+    button {
+      @include z(14px);
+      border-radius: 50%;
+      background: $color-1;
+      margin: 0 10px;
+    }
+    .slick-active {
+      button {
+        background: $preview-color;
+      }
+    }
+  }
+
+  // больше отступа в теле статьи
+  .b-entry-text & {
+    margin: ems($gutter-item * 3) 0;
+  }
+}
