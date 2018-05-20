@@ -10,7 +10,6 @@
         <meta name="keywords" content="">
         <!-- build:css css/vendors.min.css -->
 <!-- bower:css -->
-<link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
 <!-- endbower -->
         <!-- endbuild -->
         <link rel="stylesheet" href="css/theme.min.css?rev=@@hash">
@@ -78,40 +77,36 @@
             <main class="s-main">
                 <div class="s-base">
                     <div class="grid">
-                        <div class="rw">
-                            <div class="cl cl--xs-6"></div>
+                        <div class="b-breadcrumb">
+                            <ul class="b-breadcrumb__list">
+                                <li class="b-breadcrumb__item"><a class="b-breadcrumb__link" href="#">Главная</a>
+                                </li>
+                                <li class="b-breadcrumb__item"><a class="b-breadcrumb__link" href="#">Категория</a>
+                                </li>
+                                <li class="b-breadcrumb__item"><span class="b-breadcrumb__span">Заголовок статьи</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="b-slider b-slider--mobile-tm-1 js-slider-mobile">
-                            <div class="b-slider__for">
-                                <div class="b-slider__item">
-                                    <div class="b-slider__slide-num">1</div><img src="//placehold.it/500x300/ddd.jpg?text=#{x}" alt="">
-                                </div>
-                                <div class="b-slider__item">
-                                    <div class="b-slider__slide-num">2</div><img src="//placehold.it/500x300/ddd.jpg?text=#{x}" alt="">
-                                </div>
-                                <div class="b-slider__item">
-                                    <div class="b-slider__slide-num">3</div><img src="//placehold.it/500x300/ddd.jpg?text=#{x}" alt="">
-                                </div>
-                                <div class="b-slider__item">
-                                    <div class="b-slider__slide-num">4</div><img src="//placehold.it/500x300/ddd.jpg?text=#{x}" alt="">
-                                </div>
-                                <div class="b-slider__item">
-                                    <div class="b-slider__slide-num">5</div><img src="//placehold.it/500x300/ddd.jpg?text=#{x}" alt="">
-                                </div>
-                                <div class="b-slider__item">
-                                    <div class="b-slider__slide-num">6</div><img src="//placehold.it/500x300/ddd.jpg?text=#{x}" alt="">
-                                </div>
-                                <div class="b-slider__item">
-                                    <div class="b-slider__slide-num">7</div><img src="//placehold.it/500x300/ddd.jpg?text=#{x}" alt="">
-                                </div>
-                                <div class="b-slider__item">
-                                    <div class="b-slider__slide-num">8</div><img src="//placehold.it/500x300/ddd.jpg?text=#{x}" alt="">
-                                </div>
-                                <div class="b-slider__item">
-                                    <div class="b-slider__slide-num">9</div><img src="//placehold.it/500x300/ddd.jpg?text=#{x}" alt="">
-                                </div>
+                        <h1>Title</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <form class="form form--tm-1">
+                            <div class="form__group">
+                                <label class="form__label">Ваше имя</label>
+                                <input class="form__field" type="text" name="name" placeholder="Ваше имя" required>
                             </div>
-                        </div>
+                            <div class="form__group">
+                                <input class="form__field" type="email" name="email" placeholder="Ваш e-mail" required>
+                            </div>
+                            <div class="form__group">
+                                <input class="form__field" type="tel" name="phone" placeholder="Ваш телефон" required>
+                            </div>
+                            <div class="form__group">
+                                <textarea class="form__field w100p" rows="5" name="msg" placeholder="Сообщение" required></textarea>
+                            </div>
+                            <div class="form__group form__group--bn">
+                                <button class="bn bn--default" type="submit">submit<i class="fas fa-angle-right icon icon--layout-right"></i></button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </main>
@@ -167,7 +162,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- build:js js/vendors.min.js -->
 <!-- bower:js -->
-<script src="/bower_components/slick-carousel/slick/slick.js"></script>
 <!-- endbower -->
         <!-- endbuild -->
         <script src="js/theme.js?rev=@@hash"></script>

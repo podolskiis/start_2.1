@@ -7,22 +7,6 @@ block vars
 block content
   .s-base
     .grid
-      .rw
-        .cl.cl--xs-6
-      - var sliders = 10
-      .b-slider.b-slider--mobile-tm-1.js-slider-mobile
-        .b-slider__for
-          - for (var x = 1; x < sliders; x++)
-            .b-slider__item
-              .b-slider__slide-num #{x}
-              img(src="//placehold.it/500x300/ddd.jpg?text=#{x}" alt="")
-        //- .b-slider__nav
-          - for (var x = 1; x < sliders; x++)
-            .b-slider__item
-              .b-slider__slide-num #{x}
-              img(src="//placehold.it/200x130/333.jpg?text=#{x}" alt="")
-    
-    //- .grid
       +b-breadcrumb(['Главная','Категория','Заголовок статьи'])
       h1
         | Title
