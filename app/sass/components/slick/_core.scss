@@ -1,11 +1,14 @@
 .b-slider {
   $root: &;
+
   #{$root}__item {
     position: relative;
     vertical-align: middle;
   }
-  #{$root}__for,
-  #{$root}__nav {
+  #{$root}__for, #{$root}__nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: none;
     &.slick-initialized {
       display: block;
@@ -17,13 +20,6 @@
         display: none;
       }
     }
-  }
-  #{$root}__slide-num {
-    position: absolute;
-    color: #ccc;
-    right: 0;
-    line-height: 1;
-    padding: 10px;
   }
 
   // SLIDE
@@ -93,5 +89,4 @@
 
   @import "theme/horizontal-tm-1/layout";
   // @import "theme/vertical-tm-1/layout";
-  // @import "theme/mobile-tm-1/layout";
 }

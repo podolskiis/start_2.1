@@ -7,6 +7,9 @@
   "overrides": {
     "fancybox": {
       "dependencies": []
+    },
+    "slick-carousel": {
+      "dependencies": []
     }
   }
 }
