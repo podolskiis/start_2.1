@@ -8,7 +8,6 @@ var // GLOBAL VARIABLES
 // script...
 
 
-
 // WINDOW-LOAD
 (function(){
   $(window).on('load', function() {

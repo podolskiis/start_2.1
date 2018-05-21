@@ -38,7 +38,7 @@
 
   // ARROW
   .slick-arrow {
-    @extend .bn;
+    @include reset-btn;
     position: absolute;
     z-index: 9;
   }
@@ -84,7 +84,7 @@
     justify-content: center;
     line-height: 1;
     button {
-      @extend .bn;
+      @include reset-btn;
       font-size: 0 !important;
       line-height: 0 !important;
       display: block !important;
@@ -92,6 +92,6 @@
   }
 
   @import "theme/horizontal-tm-1/layout";
-  @import "theme/vertical-tm-1/layout";
-  @import "theme/mobile-tm-1/layout";
+  // @import "theme/vertical-tm-1/layout";
+  // @import "theme/mobile-tm-1/layout";
 }

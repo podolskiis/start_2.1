@@ -1,0 +1,14 @@
+@import 'var';
+@import 'mixin/btn-size';
+@import 'mixin/btn-group';
+
+.bn {
+  $root: &;
+  @include reset-btn;
+  input {
+    @include field-magic;
+  }
+  @include btn-group($root);
+
+  @import 'theme';
+}

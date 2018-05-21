@@ -1,9 +1,4 @@
-@import 'var';
-@import 'mixin/btn-size';
-@import 'mixin/btn-group';
-
-.bn {
-  $root: &;
+@mixin reset-btn {
   background-color: transparent;
   outline: none;
   margin: 0;
@@ -32,21 +27,4 @@
   &:hover {
     text-decoration: none;
   }
-  & input {
-    background: none;
-    border: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
-
-  @include btn-group($root);
-
-  @import 'theme';
 }
