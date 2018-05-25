@@ -1276,20 +1276,23 @@ dl:last-child,
 }
 
 a,
-.b-link {
+.b-link,
+.bn.b-link {
     cursor: pointer;
     text-decoration: none;
     color: #0275d8;
 }
 
 a:hover,
-.b-link:hover {
-    color: #014c8c;
+.b-link:hover,
+.bn.b-link:hover {
+    color: #0260b2;
     text-decoration: underline;
 }
 
 a:focus,
-.b-link:focus {
+.b-link:focus,
+.bn.b-link:focus {
     outline: none;
 }
 
@@ -1299,11 +1302,12 @@ textarea,
 button,
 .bn,
 .b-link {
-    -webkit-transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    -o-transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    -webkit-transition-property: color, background-color, border-color;
+    -o-transition-property: color, background-color, border-color;
+    transition-property: color, background-color, border-color;
+    -webkit-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
 }
 
 [class^="svg-"] rect,
@@ -1377,7 +1381,6 @@ img {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    white-space: nowrap;
     position: relative;
     text-decoration: none;
     -webkit-box-sizing: inherit;
@@ -1386,11 +1389,11 @@ img {
     font-size: inherit;
     font-weight: inherit;
     font-family: inherit;
-    line-height: 1;
-    color: inherit;
+    line-height: inherit;
     text-transform: inherit;
     letter-spacing: inherit;
     max-width: 100%;
+    color: inherit;
     cursor: pointer;
 }
 
@@ -1447,14 +1450,19 @@ img {
 
 .bn--base,
 .bn--default,
-.bn--outline-default {
+.bn--default-outline,
+.bn--default-link {
     border: 1px solid transparent;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    padding: 0 10px;
-    line-height: 38px;
+    line-height: 1.4;
+    padding-top: 0.425rem;
+    padding-bottom: 0.425rem;
+    min-height: 2.5rem;
+    font-size: 1rem;
 }
 
 .bn--default {
@@ -1462,26 +1470,90 @@ img {
     color: #fff;
 }
 
-.bn--default:hover {
+.bn--default:hover,
+.bn--default.hover {
+    background: #0260b2;
+}
+
+.bn--default:active,
+.bn--default.active {
     background: #014c8c;
 }
 
-.bn--outline-default {
+.bn--default-outline {
     border-color: #0275d8;
     color: #0275d8;
 }
 
-.bn--outline-default:hover {
+.bn--default-outline:hover,
+.bn--default-outline.hover {
     background: #0275d8;
     color: #fff;
 }
 
-.bn--link {
+.bn--default-outline:active,
+.bn--default-outline.active {
+    background: #014c8c;
+    border-color: #014c8c;
+    color: #fff;
+}
+
+.bn--default-link {
     color: #0275d8;
 }
 
-.bn--link:hover {
+.bn--default-link:hover,
+.bn--default-link.hover {
+    color: #0260b2;
+}
+
+.bn--default-link:active,
+.bn--default-link.active {
     color: #014c8c;
+}
+
+.bn--lg {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.5625rem;
+    padding-bottom: 0.5625rem;
+    min-height: 3.125rem;
+    font-size: 1.25rem;
+}
+
+.bn--lg .icon[class*=left] {
+    margin-right: 10px;
+}
+
+.bn--lg .icon[class*=right] {
+    margin-left: 10px;
+}
+
+.bn--sm {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.2875rem;
+    padding-bottom: 0.2875rem;
+    min-height: 1.875rem;
+    font-size: 0.75rem;
+}
+
+.bn--sm .icon[class*=left] {
+    margin-right: 6px;
+}
+
+.bn--sm .icon[class*=right] {
+    margin-left: 6px;
+}
+
+.bn--circle {
+    -webkit-border-radius: 10rem !important;
+    border-radius: 10rem !important;
+}
+
+.bn--rect {
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
 }
 
 .form .form__field {
@@ -1520,8 +1592,8 @@ img {
     border-style: solid;
     background-color: #fff;
     border-color: #ddd;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 0.2rem;
+    border-radius: 0.2rem;
     font-size: 16px;
     color: #333333;
     font-family: "Roboto", sans-serif;
@@ -1620,11 +1692,12 @@ img {
 }
 
 .form--tm-1 .b-input-icon {
-    -webkit-transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    -o-transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+    -webkit-transition-property: color, background-color, border-color;
+    -o-transition-property: color, background-color, border-color;
+    transition-property: color, background-color, border-color;
+    -webkit-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
     position: relative;
     display: inline-block;
     padding: 0 !important;
@@ -1639,8 +1712,8 @@ img {
     border-style: solid;
     background-color: #fff;
     border-color: #ddd;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 0.2rem;
+    border-radius: 0.2rem;
     font-size: 16px;
     color: #333333;
     font-family: "Roboto", sans-serif;
@@ -1693,153 +1766,6 @@ img {
 
 .form--tm-1 label.error {
     display: none !important;
-}
-
-.b-check {
-    display: inline-block;
-    position: relative;
-    text-align: left;
-}
-
-.b-check__row {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.b-check__input {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    opacity: 0 !important;
-    border: 0 !important;
-    clip: rect(0 0 0 0) !important;
-}
-
-.b-check__field {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -1px;
-}
-
-.b-check__checked {
-    display: block;
-}
-
-.b-check__checked::before {
-    content: "";
-    position: absolute;
-    opacity: 0;
-}
-
-.b-check__text {
-    cursor: default;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.b-check__input:checked + .b-check__checked:before {
-    opacity: 1;
-}
-
-.b-check--checkbox-tm-1 .b-check__col:last-child {
-    margin-left: 10px;
-}
-
-.b-check--checkbox-tm-1 .b-check__checked {
-    -webkit-transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    -o-transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    width: 18px;
-    height: 18px;
-}
-
-.b-check--checkbox-tm-1 .b-check__checked::before {
-    -webkit-transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    -o-transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    top: 4px;
-    left: 4px;
-    right: 4px;
-    bottom: 4px;
-    background-color: #ddd;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-}
-
-.b-check--checkbox-tm-1 .b-check__text {
-    font-size: 12px;
-}
-
-.b-check--checkbox-tm-1 .b-check__input:focus + .b-check__checked {
-    background-color: #fff;
-    border-color: #aaa;
-}
-
-.b-check--checkbox-tm-1 .b-check__input:focus + .b-check__checked:before {
-    background-color: #aaa;
-}
-
-.b-check--radio-tm-1 .b-check__col:last-child {
-    margin-left: 10px;
-}
-
-.b-check--radio-tm-1 .b-check__checked {
-    -webkit-transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    -o-transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-}
-
-.b-check--radio-tm-1 .b-check__checked::before {
-    -webkit-transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    -o-transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
-    top: 4px;
-    left: 4px;
-    right: 4px;
-    bottom: 4px;
-    background-color: #ddd;
-    -webkit-border-radius: 49%;
-    border-radius: 49%;
-}
-
-.b-check--radio-tm-1 .b-check__text {
-    font-size: 12px;
-}
-
-.b-check--radio-tm-1 .b-check__input:focus + .b-check__checked {
-    background-color: #fff;
-    border-color: #aaa;
-}
-
-.b-check--radio-tm-1 .b-check__input:focus + .b-check__checked:before {
-    background-color: #aaa;
 }
 
 .icon--middle {
@@ -5821,6 +5747,23 @@ img {
 
     [class~="pb-25px--md-max"] {
         padding-bottom: 25px !important;
+    }
+
+    .bn--lg:not(.bn--md-not-resize) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.425rem;
+        padding-bottom: 0.425rem;
+        min-height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .bn--lg:not(.bn--md-not-resize) .icon[class*=left] {
+        margin-right: 8px;
+    }
+
+    .bn--lg:not(.bn--md-not-resize) .icon[class*=right] {
+        margin-left: 8px;
     }
 
     .form .form__field,

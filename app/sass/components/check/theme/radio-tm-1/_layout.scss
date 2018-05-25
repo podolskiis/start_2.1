@@ -14,30 +14,36 @@
     width: $ch-size;
     height: $ch-size;
     &::before {
-      @include tsn;
+      @include tsn-all;
       top: $ch-gutter-checked;
       left: $ch-gutter-checked;
       right: $ch-gutter-checked;
       bottom: $ch-gutter-checked;
       background-color: $ch-border-color;
-      border-radius: $ch-border-radius - 1;
+      border-radius: $ch-border-radius;
     }
   }
   #{$root}__text {
     font-size: $ch-text-font-size;
   }
   #{$root}__input {
+    // hover
+    &:hover + #{$root}__checked {
+      &:before {
+      }
+    }
     // focus
     &:focus + #{$root}__checked {
       background-color: $ch-bg;
       border-color: $ch-border-focus-color;
       &:before {
-        background-color: $ch-border-focus-color;
       }
     }
     // checked
-    &:checked + #{$root}__checked:before {
-
+    &:checked + #{$root}__checked {
+      &:before {
+        background-color: $ch-color-checked;
+      }
     }
   }
   a {

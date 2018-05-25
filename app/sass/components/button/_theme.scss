@@ -1,11 +1,14 @@
 // BASE
 &--base {
-  border: 1px solid transparent;
+  border: $btn-border-size-base solid transparent;
   border-radius: $border-radius-base;
+  padding: {
+    left: rem($btn-padding-x-base);
+    right: rem($btn-padding-x-base);
+  }
   font-family: $ff-base;
-  font-size: $fz-base;
-  padding: 0 $btn-padding-x;
-  @include btn-size($btn-size);
+  line-height: $btn-line-height-base;
+  @include btn-size($btn-size-base,$btn-font-size-base);
 }
 
 // THEME
@@ -13,24 +16,49 @@
   @extend #{$root}--base;
   background: $link-color-base;
   color: #fff;
-  &:hover {
+  &:hover, &.hover {
     background: $link-hover-color-base;
+  }
+  &:active, &.active {
+    background: $link-active-color-base;
   }
 }
 
-&--outline-default {
+&--default-outline {
   @extend #{$root}--base;
   border-color: $link-color-base;
   color: $link-color-base;
-  &:hover {
+  &:hover, &.hover {
     background: $link-color-base;
+    color: #fff;
+  }
+  &:active, &.active {
+    background: $link-active-color-base;
+    border-color: $link-active-color-base;
     color: #fff;
   }
 }
 
-&--link {
+&--default-link {
+  @extend #{$root}--base;
   color: $link-color-base;
-  &:hover {
+  &:hover, &.hover {
     color: $link-hover-color-base;
   }
+  &:active, &.active {
+    color: $link-active-color-base;
+  }
+}
+
+// SIZE
+&--lg {
+  @include btn-resize(1.25);
+  @media($max-md) {
+    &:not(#{$root}--md-not-resize) {
+      @include btn-resize(1);
+    }
+  }
+}
+&--sm {
+  @include btn-resize(0.75);
 }
