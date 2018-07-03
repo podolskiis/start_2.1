@@ -14,23 +14,24 @@
   font-size: rem($font-size);
 }
 
+@function size($n1,$n2) {
+	@return $n1 * $n2;
+}
+
 @mixin btn-resize(
-	$size,
+	$size: 1,
 	$padding-x: null
 ) {
-	@function size($n) {
-		@return $n * $size;
-	}
-	$padding-x: rem(if($padding-x, $padding-x, size($btn-padding-x-base)));
+	$padding-x: rem(if($padding-x, $padding-x, size($btn-padding-x-base,$size)));
 	padding: {
 		left: $padding-x;
 		right: $padding-x;
 	}
-	@include btn-size(size($btn-size-base), size($btn-font-size-base));
+	@include btn-size(size($btn-size-base,$size), size($btn-font-size-base,$size));
 	.icon[class*=left] {
-		margin-right: size($btn-icon-spacing-y-base);
+		margin-right: size($btn-icon-spacing-y-base,$size);
 	}
 	.icon[class*=right] {
-		margin-left: size($btn-icon-spacing-y-base);
+		margin-left: size($btn-icon-spacing-y-base,$size);
 	}
 }
