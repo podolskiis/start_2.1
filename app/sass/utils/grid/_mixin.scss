@@ -1,10 +1,9 @@
 // GRID-GENERATOR
 @mixin media-generator($breakpoint) {
-  @include grid-generator($breakpoint);
-  @include row-generator($breakpoint);
-  @include col-generator($breakpoint);
-  @include gutter-generator($breakpoint);
-  @include help-generator($breakpoint, $resize: 'min');
+  @include grid($breakpoint);
+  @include row($breakpoint);
+  @include col($breakpoint);
+  @include min-max($breakpoint, $resize: 'min');
 }
 
 @mixin grid-init {
@@ -14,7 +13,7 @@
         @include media-generator($breakpoint);
       }
       @media (max-width: $width - 1) {
-        @include help-generator($breakpoint, $resize: 'max');
+        @include min-max($breakpoint, $resize: 'max');
       }
     }
     @else {

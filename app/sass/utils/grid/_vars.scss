@@ -55,10 +55,8 @@ $grid-gutter-sm: $grid-gutter-sm;
 
 // NAMING - BEM
 // Block
-$b-grid: 'grid';
-$b-row:  'rw';
-$b-col:  'cl';
+$grid: 'grid';
+$row:  'rw';
+$col:  'cl';
 // Modifier
-$m-grid: '#{$b-grid}--';
-$m-row:  '#{$b-row}--';
-$m-col:  '#{$b-col}--';
+$mod: '--';

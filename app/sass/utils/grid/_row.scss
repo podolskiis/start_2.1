@@ -1,4 +1,4 @@
-[class~="#{$b-row}"] {
+[class~=#{$row}] {
   flex-wrap: wrap;
   display: flex;
   margin-top: -$grid-gutter;
@@ -9,50 +9,64 @@
   }
 }
 
-@mixin row-generator($breakpoint) {
-  [class~="#{$m-row+$breakpoint}-start"] {
+@mixin row($breakpoint) {
+  // horizontal: justify-content
+  [class~=#{$row+$mod+$breakpoint}-left] {
+    justify-content: flex-start;
+  }
+  [class~=#{$row+$mod+$breakpoint}-center] {
+    justify-content: center;
+  }
+  [class~=#{$row+$mod+$breakpoint}-right] {
+    justify-content: flex-end;
+  }
+  [class~=#{$row+$mod+$breakpoint}-between] {
+    justify-content: space-between;
+  }
+  [class~=#{$row+$mod+$breakpoint}-around] {
+    justify-content: space-around;
+  }
+  // vertical: align-items
+  [class~=#{$row+$mod+$breakpoint}-top] {
     align-items: flex-start;
   }
-  [class~="#{$m-row+$breakpoint}-middle"] {
+  [class~=#{$row+$mod+$breakpoint}-middle] {
     align-items: center;
     align-content: center;
   }
-  [class~="#{$m-row+$breakpoint}-end"] {
+  [class~=#{$row+$mod+$breakpoint}-bottom] {
     align-items: flex-end;
   }
-  [class~="#{$m-row+$breakpoint}-center"] {
-    justify-content: center;
-  }
-  [class~="#{$m-row+$breakpoint}-left"] {
-    justify-content: flex-start;
-  }
-  [class~="#{$m-row+$breakpoint}-right"] {
-    justify-content: flex-end;
-  }
-  [class~="#{$m-row+$breakpoint}-around"] {
-    justify-content: space-around;
-  }
-  [class~="#{$m-row+$breakpoint}-between"] {
-    justify-content: space-between;
-  }
-  [class~="#{$m-row+$breakpoint}-nowrap"] {
-    flex-wrap: nowrap
-  }
-  [class~="#{$m-row+$breakpoint}-reverse"] {
-    flex-direction: row-reverse;
-  }
-  [class~="#{$m-row+$breakpoint}-stretch"] {
-    align-items: stretch;
+  [class~=#{$row+$mod+$breakpoint}-stretch] {
     flex-flow: row wrap;
-    & > [class~="#{$b-col}"] {
+    align-items: stretch;
+    & > [class~=#{$col}] {
       display: flex;
     }
   }
-  [class~="#{$m-row+$breakpoint}-content"] {
-    & > [class~="#{$b-col}"] {
-      width: auto;
-      flex: 0 0 auto;
-      flex-basis: auto;
+  // flex-wrap
+  [class~=#{$row+$mod+$breakpoint}-wrap] {
+    flex-wrap: wrap
+  }
+  [class~=#{$row+$mod+$breakpoint}-nowrap] {
+    flex-wrap: nowrap
+  }
+  // gutter
+  @each $gutter-size in $gutter-size-map {
+    $sfx: if($gutter-size == $grid-gutter, 'base', '#{strip-units($gutter-size)}');
+    $gutter-size: if($gutter-size == $grid-gutter, $grid-gutter, $gutter-size);
+    @each $gutter-suffix in 'gutter', 'gutter-x', 'gutter-y' {
+      [class~=#{$row+$mod+$breakpoint}-#{$gutter-suffix}-#{$sfx}] {
+        @if $gutter-suffix == 'gutter' {
+          @include gutter-rw($gutter-size);
+        }
+        @else if $gutter-suffix == 'gutter-x' {
+          @include gutter-rw-x($gutter-size);
+        }
+        @else if $gutter-suffix == 'gutter-y' {
+          @include gutter-rw-y($gutter-size);
+        }
+      }
     }
   }
 }
