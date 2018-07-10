@@ -22,7 +22,7 @@ $spacing-size-map: $spacing-size-map;
   // helpers-map
   $sfx: if($breakpoint == 'xs', '', '-#{$breakpoint}-#{$resize}');
   @each $class, $rules in $helpers-map {
-    [class~=#{$class}#{$sfx}] {
+    .#{$class}#{$sfx} {
       @each $rule, $value in $rules {
         #{$rule}: $value !important;
       }
@@ -32,7 +32,7 @@ $spacing-size-map: $spacing-size-map;
   $sfx: if($breakpoint == 'xs', '', '#{$breakpoint}-#{$resize}-');
   @each $spacing-class, $spacing-rule in $spacing-map {
     @each $spacing-size in $spacing-size-map {
-      [class~=#{$spacing-class + '-' + $sfx + strip-units($spacing-size)}] {
+      .#{$spacing-class + '-' + $sfx + strip-units($spacing-size)} {
         #{$spacing-rule}: $spacing-size !important;
       }
     }

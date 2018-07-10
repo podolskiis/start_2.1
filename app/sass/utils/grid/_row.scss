@@ -1,4 +1,4 @@
-[class~=#{$row}] {
+.#{$row} {
   flex-wrap: wrap;
   display: flex;
   margin-top: -$grid-gutter;
@@ -11,44 +11,44 @@
 
 @mixin row($breakpoint) {
   // horizontal: justify-content
-  [class~=#{$row+$mod+$breakpoint}-left] {
+  .#{$row+$mod+$breakpoint}-left {
     justify-content: flex-start;
   }
-  [class~=#{$row+$mod+$breakpoint}-center] {
+  .#{$row+$mod+$breakpoint}-center {
     justify-content: center;
   }
-  [class~=#{$row+$mod+$breakpoint}-right] {
+  .#{$row+$mod+$breakpoint}-right {
     justify-content: flex-end;
   }
-  [class~=#{$row+$mod+$breakpoint}-between] {
+  #{$row+$mod+$breakpoint}-between {
     justify-content: space-between;
   }
-  [class~=#{$row+$mod+$breakpoint}-around] {
+  .#{$row+$mod+$breakpoint}-around {
     justify-content: space-around;
   }
   // vertical: align-items
-  [class~=#{$row+$mod+$breakpoint}-top] {
+  .#{$row+$mod+$breakpoint}-top {
     align-items: flex-start;
   }
-  [class~=#{$row+$mod+$breakpoint}-middle] {
+  .#{$row+$mod+$breakpoint}-middle {
     align-items: center;
     align-content: center;
   }
-  [class~=#{$row+$mod+$breakpoint}-bottom] {
+  .#{$row+$mod+$breakpoint}-bottom {
     align-items: flex-end;
   }
-  [class~=#{$row+$mod+$breakpoint}-stretch] {
+  .#{$row+$mod+$breakpoint}-stretch {
     flex-flow: row wrap;
     align-items: stretch;
-    & > [class~=#{$col}] {
+    & > .#{$col} {
       display: flex;
     }
   }
   // flex-wrap
-  [class~=#{$row+$mod+$breakpoint}-wrap] {
+  .#{$row+$mod+$breakpoint}-wrap {
     flex-wrap: wrap
   }
-  [class~=#{$row+$mod+$breakpoint}-nowrap] {
+  .#{$row+$mod+$breakpoint}-nowrap {
     flex-wrap: nowrap
   }
   // gutter
@@ -56,7 +56,7 @@
     $sfx: if($gutter-size == $grid-gutter, 'base', '#{strip-units($gutter-size)}');
     $gutter-size: if($gutter-size == $grid-gutter, $grid-gutter, $gutter-size);
     @each $gutter-suffix in 'gutter', 'gutter-x', 'gutter-y' {
-      [class~=#{$row+$mod+$breakpoint}-#{$gutter-suffix}-#{$sfx}] {
+      .#{$row+$mod+$breakpoint}-#{$gutter-suffix}-#{$sfx} {
         @if $gutter-suffix == 'gutter' {
           @include gutter-rw($gutter-size);
         }

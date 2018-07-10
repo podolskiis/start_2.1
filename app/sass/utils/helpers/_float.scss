@@ -1,14 +1,14 @@
-[class~='float-center'] {
+.float-center {
   margin-left: auto;
   margin-right: auto;
   display: block;
   float: none;
 }
 
-[class~='float-left'] {
+.float-left {
   float: left;
 }
 
-[class~='float-right'] {
+.float-right {
   float: right;
 }

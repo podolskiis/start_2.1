@@ -1,4 +1,4 @@
-[class~=#{$col}] {
+.#{$col} {
   flex: 0 0 100%;
   max-width: 100%;
   padding-top: $grid-gutter;
@@ -9,47 +9,47 @@
 }
 
 @mixin col($breakpoint) {
-  [class~=#{$col+$mod+$breakpoint}] {
+  .#{$col+$mod+$breakpoint} {
     flex-grow: 1;
     flex-basis: 0;
   }
   @for $i from 1 through $columns {
-    [class~=#{$col+$mod+$breakpoint}-#{$i}] {
+    .#{$col+$mod+$breakpoint}-#{$i} {
       max-width: percentage($i/$columns);
       flex-basis: percentage($i/$columns);
     }
   }
   @for $i from 0 through $columns {
-    [class~=#{$col+$mod+$breakpoint}-offset-#{$i}] {
+    .#{$col+$mod+$breakpoint}-offset-#{$i} {
       margin-left: percentage($i/$columns);
     }
   }
-  [class~=#{$col+$mod+$breakpoint}-first] {
+  .#{$col+$mod+$breakpoint}-first {
     order: -1;
   }
-  [class~=#{$col+$mod+$breakpoint}-last] {
+  .#{$col+$mod+$breakpoint}-last {
     order: 1;
   }
-  [class~=#{$col+$mod+$breakpoint}-top] {
+  .#{$col+$mod+$breakpoint}-top {
     align-self: flex-start;
   }
-  [class~=#{$col+$mod+$breakpoint}-middle] {
+  .#{$col+$mod+$breakpoint}-middle {
     align-self: center;
   }
-  [class~=#{$col+$mod+$breakpoint}-bottom] {
+  .#{$col+$mod+$breakpoint}-bottom {
     align-self: flex-end;
   }
-  [class~=#{$col+$mod+$breakpoint}-fill] {
+  .#{$col+$mod+$breakpoint}-fill {
     width: auto;
     flex: 1 1 0%;
     flex-basis: 0%;
   }
-  [class~=#{$col+$mod+$breakpoint}-fit] {
+  .#{$col+$mod+$breakpoint}-fit {
     width: auto;
     flex: 0 0 auto;
     flex-basis: auto;
   }
-  [class~=#{$col+$mod+$breakpoint}-float] {
+  .#{$col+$mod+$breakpoint}-float {
     width: auto;
     flex: 0 0 auto;
     flex-basis: auto;
