@@ -20,7 +20,7 @@
   .#{$row+$mod+$breakpoint}-right {
     justify-content: flex-end;
   }
-  #{$row+$mod+$breakpoint}-between {
+  .#{$row+$mod+$breakpoint}-between {
     justify-content: space-between;
   }
   .#{$row+$mod+$breakpoint}-around {
