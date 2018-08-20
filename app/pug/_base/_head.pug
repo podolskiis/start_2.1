@@ -8,10 +8,10 @@ block title
 
 +favicon
 
-meta(name="description" content="")
-meta(name="keywords" content="")
+meta(name="description" content=title + ' ' + poject)
+meta(name="keywords" content=poject)
 
-// build:css css/vendors.min.css 
+// build:css assets/css/vendors.min.css 
 = '\n'
 <!-- bower:css -->
 <!-- endbower -->
@@ -25,11 +25,11 @@ if icomoon
 +links("https://use.fontawesome.com/releases/v5.0.13/css/all.css")
 
 +links(
-  "css/theme.min.css"+revAppend,
-  "css/custom.css"
+  "assets/css/theme.min.css"+revAppend,
+  "assets/css/custom.css"
 )
 
 if modernizr
-  +scripts("js/modernizr.js")
+  +scripts("assets/js/modernizr.js")
 
 +ltIE-10

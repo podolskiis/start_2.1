@@ -8,7 +8,7 @@ module.exports = {
       home:         'app/',
       sass: {
         src:        'app/sass/main.scss',
-        dest:       'app/css/',
+        dest:       'app/assets/css/',
         watch:      'app/sass/**/*.+(scss|sass)',
         rename:     'theme.min.css'
       },
@@ -24,40 +24,40 @@ module.exports = {
         watch:      'bower.json'
       },
       js: {
-        watch:      'app/js/*.js'
+        watch:      'app/assets/js/*.js'
       }
     }
   },
   dist: {
     home:           'www/',
     img: {
-      src:          'app/images/**',
-      dest:         'www/images/'
+      src:          'app/assets/images/**',
+      dest:         'www/assets/images/'
     },
     useref: {
       src:          'app/*.html',
       dest:         'www/'
     },
     css: {
-      src:        'app/css/theme.min.css',
-      dest:       'www/css/'
+      src:        'app/assets/css/theme.min.css',
+      dest:       'www/assets/css/'
   	},
     import: {
       css: {
-        src:        'app/css/custom.css',
-        dest:       'www/css/'
+        src:        'app/assets/css/custom.css',
+        dest:       'www/assets/css/'
     	},
       fonts: {
-        src:        'app/fonts/**',
-        dest:       'www/fonts/'
+        src:        'app/assets/fonts/**',
+        dest:       'www/assets/fonts/'
   	  },
       js: {
-        src:        'app/js/**',
-        dest:       'www/js'
+        src:        'app/assets/js/**',
+        dest:       'www/assets/js'
   	  },
       video: {
-        src:        'app/video/**',
-        dest:       'www/video'
+        src:        'app/assets/video/**',
+        dest:       'www/assets/video'
   	  },
       dop: {
         src: [

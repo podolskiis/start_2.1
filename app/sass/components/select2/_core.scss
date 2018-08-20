@@ -19,7 +19,7 @@
 }
 
 .select2-hidden-accessible {
-  @include field-magic;
+  @include field-hide;
 }
 
 .b-select2 {
@@ -31,7 +31,7 @@
   max-width: 100%;
   @at-root {
     select[data-select] {
-      @include field-magic;
+      @include field-hide;
     }
   }
   & > * {

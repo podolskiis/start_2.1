@@ -6,7 +6,7 @@
   $root: &;
   @include reset-btn;
   input {
-    @include field-magic;
+    @include field-hide;
   }
   @include btn-group($root);
   @import 'theme';

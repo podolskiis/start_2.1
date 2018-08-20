@@ -9,7 +9,7 @@
     display: flex;
   }
   &__input {
-    @include field-magic;
+    @include field-hide;
   }
   &__field {
     position: relative;

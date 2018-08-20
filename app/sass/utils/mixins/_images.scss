@@ -1,6 +1,4 @@
-$srcImg:  '../images/theme/';
-
-@mixin icons($url:'#{$srcImg}icons.png') {
+@mixin icons($url:'#{$dir-images}icons.png') {
   background-image: url($url);
   background-position: 100% 100%;
   background-repeat: no-repeat;
