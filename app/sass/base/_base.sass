@@ -8,8 +8,8 @@ body
 html, body
   @if $fix-width-site
     min-width: ($fix-width-site + $grid-gutter)
-  // @else
-    min-width: 300px
+  @else
+    min-width: 374px
 
 .grid
   @if $fix-width-site
@@ -18,12 +18,6 @@ html, body
   @else
     @media(max-width: 479px)
       padding: 0 $grid-gutter-sm/2
-  // @if $maxFull
-    @media($min-xl)
-      &[class~="grid--xl-full"]
-        max-width: $maxFull
-  img
-    max-width: 100%
 
 .page-wrap
   overflow: hidden
@@ -33,5 +27,7 @@ html, body
   > main
     flex: 1 0 auto
 
-img
+img:not([height])
   vertical-align: middle
+  max-width: 100%
+  height: auto

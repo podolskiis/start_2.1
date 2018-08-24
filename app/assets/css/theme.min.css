@@ -1320,8 +1320,9 @@ body {
     color: #333333;
 }
 
-.grid img {
-    max-width: 100%;
+html,
+body {
+    min-width: 374px;
 }
 
 .page-wrap {
@@ -1345,8 +1346,10 @@ body {
     flex: 1 0 auto;
 }
 
-img {
+img:not([height]) {
     vertical-align: middle;
+    max-width: 100%;
+    height: auto;
 }
 
 .bn {
