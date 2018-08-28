@@ -3,9 +3,8 @@
     Front-end Developer: Sergey Podolsky
 */
 
-@import 'vars';
-
 @import 'utils/functions/import';
+@import 'vars';
 @import 'utils/mixins/import';
 @import 'utils/grid/import';
 @import 'utils/helpers/import';
@@ -17,7 +16,8 @@
 @import 'components/button/core';
 @import 'components/form/core';
 @import 'components/icon/core';
-// @import 'components/check/core';
+
+@import 'components/check/core';
 // @import 'components/fancybox/core';
 // @import 'components/select2/core';
 // @import 'components/slick/core';

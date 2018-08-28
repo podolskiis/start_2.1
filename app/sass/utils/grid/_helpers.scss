@@ -16,7 +16,7 @@ $spacing-map: (
   pr: 'padding-right',
   pb: 'padding-bottom',
 ) !default;
-$spacing-size-map: $spacing-size-map;
+$spacing-size-map: $offset-size-map;
 
 @mixin min-max($breakpoint, $resize) {
   $sfx: if($breakpoint == 'xs', '', '-#{$breakpoint}-#{$resize}');
@@ -31,7 +31,7 @@ $spacing-size-map: $spacing-size-map;
   // spacing-map
   @each $spacing-class, $spacing-rule in $spacing-map {
     @each $spacing-size in $spacing-size-map {
-      .#{$spacing-class + '-' + strip-units($spacing-size) + $sfx} {
+      .#{$spacing-class + '-#{strip-units($spacing-size)}' + $sfx} {
         #{$spacing-rule}: $spacing-size !important;
       }
     }

@@ -10,6 +10,12 @@
     },
     "slick-carousel": {
       "dependencies": []
+    },
+    "select2": {
+      "main": [
+        "dist/js/select2.full.js"
+      ]
     }
-  }
+  },
+  "devDependencies": {}
 }

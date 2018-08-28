@@ -3,12 +3,12 @@
   border: $btn-border-size-base solid transparent;
   border-radius: $border-radius-base;
   padding: {
-    left: rem($btn-padding-x-base);
-    right: rem($btn-padding-x-base);
+    left: unit($btn-padding-x-base);
+    right: unit($btn-padding-x-base);
   }
   font-family: $ff-base;
   line-height: $btn-line-height-base;
-  @include btn-size($btn-size-base,$btn-font-size-base);
+  @include btn-size(40,16);
 }
 
 // THEME
@@ -16,6 +16,7 @@
   @extend #{$root}--base;
   background: $link-color-base;
   color: #fff;
+  font-size: inherit;
   &:hover, &.hover {
     background: $link-hover-color-base;
   }

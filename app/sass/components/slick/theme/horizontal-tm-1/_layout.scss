@@ -1,23 +1,37 @@
 &--horizontal-tm-1 {
-  $preview-gutter: 15px;
-  $preview-border: 3px;
-  $preview-color: $link-color-base;
-  $preview-hover-color: $link-hover-color-base;
+  $thumbs-offset: unit(10px);
+  $thumbs-border: unit(3px);
+  $thumbs-base-color: #7f7f7f;
+  $thumbs-hover-color: #000;
+  $thumbs-active-color: red;
 
-  #{$root}__for {
+  #{$root}__carousel--screen {
     a[data-fancybox] {
       cursor: zoom-in;
     }
+    .slick-arrow.slick-arrow {
+      font-size: unit(30px);
+      opacity: .5;
+      &[class*="left"],&[class*="prev"] {
+        left: $thumbs-offset;
+      }
+      &[class*="right"],&[class*="next"] {
+        right: $thumbs-offset;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
-  #{$root}__nav {
+  #{$root}__carousel--thumbs {
     overflow: hidden;
-    margin-top: $preview-gutter;
-    padding: 0 50px;
+    margin-top: $thumbs-offset;
+    padding: 0 unit(50px); // или padding: 0;
     #{$root}__item {
       position: relative;
       &::after {
-        @include tsn-all;
+        // @include tsn-all;
         content: "";
         display: block;
         position: absolute;
@@ -26,10 +40,13 @@
         left: 0;
         right: 0;
         bottom: 0;
-        border: $preview-border solid rgba(#000, 1);
+        border: $thumbs-border solid $thumbs-base-color;
+      }
+      &:hover::after {
+        border-color: $thumbs-hover-color;
       }
       img {
-        @include tsn-all;
+        // @include tsn-all;
         opacity: .75;
       }
       &:hover {
@@ -39,11 +56,11 @@
       }
     }
     .slick-list {
-      margin: 0 (-$preview-gutter/2);
+      margin: 0 (-$thumbs-offset/2);
     }
     .slick-slide {
       & > * {
-        padding: 0 ($preview-gutter/2);
+        padding: 0 ($thumbs-offset/2);
       }
     }
     .slick-current {
@@ -53,44 +70,70 @@
       #{$root}__item {
         position: relative;
         &::after {
-          border-color: $preview-color;
+          border-color: $thumbs-active-color;
         }
       }
     }
-    .slick-arrow {
+    .slick-arrow.slick-arrow {
+      font-size: unit(30px);
+      color: $thumbs-base-color;
+      &[class*="left"],&[class*="prev"] {
+        left: $thumbs-offset;
+      }
+      &[class*="right"],&[class*="next"] {
+        right: $thumbs-offset;
+      }
       &:hover {
-      }
-    }
-    &.slick-slider {
-      .slick-arrow {
-        &[class*="left"],&[class*="prev"] {
-          left: 0;
-        }
-        &[class*="right"],&[class*="next"] {
-          right: 0;
-        }
+        color: $thumbs-hover-color;
       }
     }
   }
 
   .slick-dots {
-    margin: 15px 0 0;
+    margin: unit(15px) 0 0;
     button {
       border-radius: 50%;
-      background: $color-1;
-      width: 10px;
-      height: 10px;
-      margin: 0 10px;
+      background: $thumbs-base-color;
+      width: unit(10px);
+      height: unit(10px);
+      margin: 0 unit(10px);
     }
     .slick-active {
       button {
-        background: $preview-color;
+        background: $thumbs-active-color;
       }
     }
   }
 
   // больше отступа в теле статьи
   .b-entry-text & {
-    margin: ems($gutter-item * 3) 0;
+    // margin: ems($gutter-item * 3) 0;
   }
+
+  @media($min-xl) {
+    $thumbs-offset: unit(15px);
+    #{$root}__carousel {
+      .slick-arrow.slick-arrow {
+        &[class*="left"],&[class*="prev"] {
+          left: $thumbs-offset;
+        }
+        &[class*="right"],&[class*="next"] {
+          right: $thumbs-offset;
+        }
+      }
+    }
+    #{$root}__carousel--thumbs {
+      margin-top: $thumbs-offset;
+      padding: 0 unit(0); // или padding: 0;
+      .slick-list {
+        margin: 0 (-$thumbs-offset/2);
+      }
+      .slick-slide {
+        & > * {
+          padding: 0 ($thumbs-offset/2);
+        }
+      }
+    }
+  }
+
 }

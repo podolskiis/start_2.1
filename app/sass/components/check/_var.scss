@@ -1,5 +1,5 @@
-$ch-size-base: 18px;
-$ch-spacing-col-base: 10px;
+$ch-size-base: unit(18px);
+$ch-spacing-col-base: unit(10px);
 $ch-bg-base: $input-bg-color;
 
 $ch-border-width-base: $input-border-width;
@@ -8,4 +8,4 @@ $ch-border-focus-color-base: $input-border-focus-color;
 $ch-border-radius-base: $input-border-radius;
 
 $ch-color-checked-base: $color-1;
-$ch-gutter-checked-base: 4px;
+$ch-gutter-checked-base: unit(4px);

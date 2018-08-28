@@ -4,14 +4,17 @@
 	$border-size: $btn-border-size-base
 ) {
 	$line-height: $font-size * $btn-line-height-base;
-  $padding-y: rem(($size - $line-height)/2 - $border-size - 1);
+  $padding-y: unit(($size - $line-height)/2 - $border-size - 1);
 	@if $padding-y > 0 {
-  	padding: {top: $padding-y; bottom: $padding-y;}
+  	padding: {
+			top: $padding-y;
+			bottom: $padding-y;
+		}
 	}
 	@if $size > $line-height {
-		min-height: rem($size);
+		min-height: unit($size);
 	}
-  font-size: rem($font-size);
+  font-size: unit($font-size);
 }
 
 @function size($n1,$n2) {
@@ -22,16 +25,11 @@
 	$size: 1,
 	$padding-x: null
 ) {
-	$padding-x: rem(if($padding-x, $padding-x, size($btn-padding-x-base,$size)));
+	$padding-x: unit(if($padding-x, $padding-x, size($btn-padding-x-base,$size)));
 	padding: {
 		left: $padding-x;
 		right: $padding-x;
 	}
 	@include btn-size(size($btn-size-base,$size), size($btn-font-size-base,$size));
-	.icon[class*=left] {
-		margin-right: size($btn-icon-spacing-y-base,$size);
-	}
-	.icon[class*=right] {
-		margin-left: size($btn-icon-spacing-y-base,$size);
-	}
+	@include btn-icon(get_size($btn-icon-spacing-y-base,$size));
 }

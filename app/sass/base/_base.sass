@@ -1,3 +1,5 @@
+html
+  font-size: 100%
 body
   font-family: $ff-base
   font-size: $fz-base
@@ -9,14 +11,16 @@ html, body
   @if $fix-width-site
     min-width: ($fix-width-site + $grid-gutter)
   @else
-    min-width: 374px
+    min-width: unit(320px)
 
 .grid
   @if $fix-width-site
     width: ($fix-width-site + $grid-gutter) !important
     max-width: none !important
   @else
-    @media(max-width: 479px)
+    @media($max-md)
+      max-width: 100%
+    // @media($max-sm)
       padding: 0 $grid-gutter-sm/2
 
 .page-wrap

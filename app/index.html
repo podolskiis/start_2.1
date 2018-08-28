@@ -11,8 +11,7 @@
         <!-- build:css assets/css/vendors.min.css -->
 <!-- bower:css -->
 <!-- endbower -->
-        <!-- endbuild -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <!-- endbuild --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/theme.min.css?rev=@@hash">
         <link rel="stylesheet" href="assets/css/custom.css">
         <!--[if lt IE 10]><link href="//rawgit.com/codefucker/finalReject/master/reject/reject.css" rel="stylesheet"/><script src="//rawgit.com/codefucker/finalReject/master/reject/reject.min.js"></script><![endif]-->
@@ -91,9 +90,12 @@
                         <h1>Title</h1>
                         <p><img src="//placehold.it/600x400" width="" height="150" alt=""></p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <ul class="b-list">
-                            <li>Ваше имя</li>
-                        </ul>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <form class="form form--tm-1">
+                            <div class="form__group"><span class="b-field-icon form__field">
+                                    <input class="b-field-icon__field" type="text" size="30" placeholder="search" required>
+                                    <button class="bn b-field-icon__icon b-field-icon__icon--over" type="submit"><i class="fas fa-search"></i></button></span></div>
+                        </form><br>
                         <form class="form form--tm-1">
                             <div class="form__group">
                                 <label class="form__label">Ваше имя</label>
@@ -107,6 +109,22 @@
                             </div>
                             <div class="form__group">
                                 <textarea class="form__field w100p" rows="5" name="msg" placeholder="Сообщение" required></textarea>
+                            </div>
+                            <div class="form__group">
+                                <label class="b-check b-check--checkbox-tm-1"><span class="b-check__row"><span class="b-check__col"><span class="b-check__field">
+                                                <input class="b-check__input" type="checkbox" required><span class="b-check__checked"></span></span></span><span class="b-check__col"><span class="b-check__val">Я соглашаюсь на обработку </span></span></span></label>
+                            </div>
+                            <div class="form__group">
+                                <div class="rw">
+                                    <div class="cl cl--xs-fit">
+                                        <label class="b-check b-check--radio-tm-1"><span class="b-check__row"><span class="b-check__col"><span class="b-check__field">
+                                                        <input class="b-check__input" type="radio" name="name" required><span class="b-check__checked"></span></span></span><span class="b-check__col"><span class="b-check__val">radio #1</span></span></span></label>
+                                    </div>
+                                    <div class="cl cl--xs-fit">
+                                        <label class="b-check b-check--radio-tm-1"><span class="b-check__row"><span class="b-check__col"><span class="b-check__field">
+                                                        <input class="b-check__input" type="radio" name="name" required><span class="b-check__checked"></span></span></span><span class="b-check__col"><span class="b-check__val">radio #2</span></span></span></label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form__group form__group--bn">
                                 <button class="bn bn--default">Button<i class="fas fa-angle-right icon icon--layout-right"></i></button>
@@ -133,33 +151,40 @@
         </div>
         <!-- MODALS: START -->
         <div class="modals-wrap hide">
-            <div class="modall modall--default wrap--w600" id="id_1">
-                <div class="modall__content">
+            <div class="modall modall--default modall--animation-1 wrap--w600" id="id_1">
+                <div class="grid modall__content">
                     <h3 class="modall__title">title</h3>
-                    <form class="form form--default">
+                    <form class="form form--tm-1">
                         <div class="form__group">
                             <input class="form__field" type="text" name="name" placeholder="Ваше имя" required>
                         </div>
                         <div class="form__group">
                             <input class="form__field" type="email" name="email" placeholder="Ваш e-mail" required>
                         </div>
-                        <div class="form__group">
-                            <input class="form__field" type="tel" name="phone" placeholder="Ваш телефон" required>
-                        </div>
-                        <div class="form__group">
-                            <textarea class="form__field w100p" rows="5" name="msg" placeholder="Сообщение" required></textarea>
-                        </div>
                         <div class="form__group form__group--bn">
-                            <button class="bn bn--default" type="submit">submit</button>
+                            <button class="bn bn--default">Button<i class="fas fa-angle-right icon icon--layout-right"></i></button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="modall modall--default modall--text wrap--w1024" id="id_2">
-                <div class="modall__content">
+            <div class="modall modall--text modall--animation-1 wrap--w1024" id="id_2">
+                <div class="grid modall__content">
                     <h3 class="modall__title">title</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis cum voluptates sed commodi maxime quidem magnam, non assumenda inventore in nemo, dolore, voluptas quam. Itaque quos dolorem architecto deserunt, adipisci!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis cum voluptates sed commodi maxime quidem magnam, non assumenda inventore in nemo, dolore, voluptas quam. Itaque quos dolorem architecto deserunt, adipisci!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </div>
         </div>

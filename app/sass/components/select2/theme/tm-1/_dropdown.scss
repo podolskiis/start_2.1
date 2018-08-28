@@ -7,7 +7,13 @@
 
 .select2-results__options {
   overflow-y: auto;
-  max-height: $dropdown-options-max-height + $selection-bd-radius + $results-option-height;
+
+  // По количеству отображающих пунктов
+  max-height: $results-option-height*5 + $selection-bd-radius;
+
+  // По фиксированной ширине
+  // max-height: $dropdown-options-max-height + $selection-bd-radius + $results-option-height;
+
   // margin-left: - $selection-bd-width;
   // margin-right: - $selection-bd-width;
 }

@@ -1,11 +1,11 @@
-// Fixed Width of the site | 980px | false
+// Fixed Width of the site | unit(980px) | false
 $fix-width-site: false;
 
 // Breakpoints Window
-$sm: 576px ;
-$md: 768px ;
-$lg: 992px ;
-$xl: 1200px;
+$sm: unit(576px) ;
+$md: unit(768px) ;
+$lg: unit(992px) ;
+$xl: unit(1200px);
 // $maxFull: 1800px;
 
 // Media Min
@@ -15,11 +15,12 @@ $min-lg: 'min-width: #{$lg}';
 $min-xl: 'min-width: #{$xl}';
 
 // Media Max
-$max-sm: 'max-width: #{$sm - 1}';
-$max-md: 'max-width: #{$md - 1}';
-$max-lg: 'max-width: #{$lg - 1}';
-$max-xl: 'max-width: #{$xl - 1}';
+$max-sm: 'max-width: #{$sm - unit(1)}';
+$max-md: 'max-width: #{$md - unit(1)}';
+$max-lg: 'max-width: #{$lg - unit(1)}';
+$max-xl: 'max-width: #{$xl - unit(1)}';
 
+// Breakpoints base
 $max-base: $max-lg;
 $min-base: $min-lg;
 
@@ -34,10 +35,10 @@ $breakpoints: (
 
 // Breakpoints Content
 $breakpoints-max-width: (
-        sm : 540px,
-        md : 720px,
-        lg : 960px,
-        xl : 1140px
+        sm : unit(540px),
+        md : unit(720px),
+        lg : unit(960px),
+        xl : unit(1140px)
 ) !default;
 
 // Number of columns

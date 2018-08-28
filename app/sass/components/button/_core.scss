@@ -1,5 +1,6 @@
 @import 'var';
 @import 'mixin/btn-size';
+@import 'mixin/btn-icon';
 @import 'mixin/btn-group';
 
 .bn {
@@ -9,6 +10,7 @@
     @include field-hide;
   }
   @include btn-group($root);
+  @include btn-icon($btn-icon-spacing-y-base);
   @import 'theme';
   @import 'radius';
 }

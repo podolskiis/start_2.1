@@ -6,7 +6,7 @@
   text-transform: $selection-text-transform;
   font-weight: $selection-font-weight;
   height: $selection-height;
-  line-height: $selection-height - ($selection-bd-width*2);
+  line-height: $selection-height - (unit($selection-bd-width)*2);
   font-size: $selection-font-size;
 
   .select2-selection__rendered {
@@ -14,6 +14,7 @@
     padding-right: $selection-padding-left;
   }
 
+  // ARROW
   .select2-selection__arrow {
     position: absolute;
     top: $selection-bd-width;

@@ -7,6 +7,7 @@
   text-align: left;
   &__row {
     display: flex;
+    align-items: flex-start;
   }
   &__input {
     @include field-hide;
@@ -15,7 +16,7 @@
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    margin-top: -1px;
+    top: -.15em;
   }
   &__checked {
     display: block;

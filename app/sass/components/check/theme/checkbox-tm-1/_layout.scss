@@ -22,12 +22,12 @@
         right: $ch-gutter-checked;
         bottom: $ch-gutter-checked;
         background-color: $ch-border-color;
-        border-radius: $ch-border-radius - 1;
+        border-radius: $ch-border-radius - unit(1);
       }
       @if $check == 'check' {
-        border-bottom: 3px solid $ch-border-focus-color;
-        border-left: 3px solid $ch-border-focus-color;
-        top: 3px;
+        border-bottom: unit(3px) solid $ch-border-focus-color;
+        border-left: unit(3px) solid $ch-border-focus-color;
+        top: unit(3px);
         left: 0;
         width: 100%;
         height: 50%;

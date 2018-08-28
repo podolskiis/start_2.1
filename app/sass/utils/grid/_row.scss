@@ -52,7 +52,7 @@
     flex-wrap: nowrap
   }
   // gutter
-  @each $gutter-size in $gutter-size-map {
+  @each $gutter-size in $offset-size-map {
     $sfx: if($gutter-size == $grid-gutter, 'base', '#{strip-units($gutter-size)}');
     $gutter-size: if($gutter-size == $grid-gutter, $grid-gutter, $gutter-size);
     @each $gutter-suffix in 'gutter', 'gutter-x', 'gutter-y' {

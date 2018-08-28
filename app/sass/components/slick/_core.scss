@@ -5,7 +5,7 @@
     position: relative;
     vertical-align: middle;
   }
-  #{$root}__for, #{$root}__nav {
+  #{$root}__carousel {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -13,12 +13,8 @@
     &.slick-initialized {
       display: block;
     }
-  }
-  #{$root}__for {
-    &.slick-dotted {
-      & + * {
-        display: none;
-      }
+    &.slick-dotted + * {
+      display: none;
     }
   }
 
@@ -34,7 +30,7 @@
 
   // ARROW
   .slick-arrow {
-    @include reset-btn;
+    // @include reset-btn;
     position: absolute;
     z-index: 9;
   }
@@ -48,10 +44,10 @@
       .slick-arrow {
         left: 50%;
         transform: translateX(-50%);
-        &[class*="top"],&[class*="prev"] {
+        &[class*="left"],&[class*="prev"] {
           top: 0;
         }
-        &[class*="bot"],&[class*="next"] {
+        &[class*="next"],&[class*="next"] {
           bottom: 0;
         }
       }
@@ -80,13 +76,16 @@
     justify-content: center;
     line-height: 1;
     button {
-      @include reset-btn;
+      border: 0;
+      margin: 0;
+      padding: 0;
       font-size: 0 !important;
       line-height: 0 !important;
       display: block !important;
+      outline: none;
     }
   }
 
   @import "theme/horizontal-tm-1/layout";
-  // @import "theme/vertical-tm-1/layout";
+  @import "theme/vertical-tm-1/layout";
 }
