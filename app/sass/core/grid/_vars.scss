@@ -15,10 +15,11 @@ $min-lg: 'min-width: #{$lg}';
 $min-xl: 'min-width: #{$xl}';
 
 // Media Max
-$max-sm: 'max-width: #{$sm - unit(1)}';
-$max-md: 'max-width: #{$md - unit(1)}';
-$max-lg: 'max-width: #{$lg - unit(1)}';
-$max-xl: 'max-width: #{$xl - unit(1)}';
+$maxnum: unit(.98px);
+$max-sm: 'max-width: #{$sm - $maxnum}';
+$max-md: 'max-width: #{$md - $maxnum}';
+$max-lg: 'max-width: #{$lg - $maxnum}';
+$max-xl: 'max-width: #{$xl - $maxnum}';
 
 // Breakpoints base
 $max-base: $max-lg;
@@ -50,7 +51,7 @@ $columns: 12 !default;
 $grid-gutter: $grid-gutter;
 $grid-gutter-sm: $grid-gutter-sm;
 @if $fix-width-site {
-  $grid-gutter-sm: false;
+    $grid-gutter-sm: false;
 }
 
 

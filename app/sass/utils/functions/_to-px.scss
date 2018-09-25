@@ -1,8 +1,0 @@
-// Convert to pixels
-
-@function px($pxval) {
-  @if not unitless($pxval) {
-    $pxval: strip-units($pxval);
-  }
-  @return ($pxval) * 1px;
-}

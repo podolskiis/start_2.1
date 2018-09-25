@@ -1,9 +1,9 @@
 .#{$col} {
   flex: 0 0 100%;
   max-width: 100%;
-  padding-top: $grid-gutter;
   padding-left: $grid-gutter/2;
   padding-right: $grid-gutter/2;
+  padding-bottom: $grid-gutter;
   display: block;
   width: 100%;
 }
@@ -46,7 +46,7 @@
   }
   .#{$col+$mod+$breakpoint}-fit {
     width: auto;
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     flex-basis: auto;
   }
 }

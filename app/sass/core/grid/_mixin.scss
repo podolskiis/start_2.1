@@ -12,7 +12,7 @@
       @media (min-width: $width) {
         @include media-generator($breakpoint);
       }
-      @media (max-width: $width - 1) {
+      @media (max-width: $width - unit(1)) {
         @include min-max($breakpoint, $resize: 'max');
       }
     }

@@ -1,21 +1,21 @@
 {
-  "name": "project",
-  "version": "1.0.0",
-  "dependencies": {
-    "normalize-css": "latest"
-  },
-  "overrides": {
-    "fancybox": {
-      "dependencies": []
-    },
-    "slick-carousel": {
-      "dependencies": []
-    },
-    "select2": {
-      "main": [
-        "dist/js/select2.full.js"
-      ]
-    }
-  },
-  "devDependencies": {}
+	"name": "project",
+	"version": "1.0.0",
+	"dependencies": {
+		"normalize-css": "latest"
+	},
+	"overrides": {
+		"fancybox": {
+			"dependencies": []
+		},
+		"slick-carousel": {
+			"dependencies": []
+		},
+		"select2": {
+			"main": [
+				"dist/js/select2.full.js"
+			]
+		}
+	},
+	"devDependencies": {}
 }

@@ -1,24 +1,24 @@
 header.s-header.s-base
-  .grid
-    .rw.rw--lg-middle
-      .cl.cl--lg-fit.cl--xs-fill
-        +b-logo('logo.png')
-      .cl.cl--lg-fill.cl--xs-fit
-        .hide-lg-max
-          .rw.rw--lg-center.rw--lg-content
-            .cl
-              +b-multiMenu(menu_main,'b-menu-main','submenu')
-        .hide-lg-min.float-right
-          button(data-bars="btn" aria-hidden="true").btn
-            | ☰
-      .cl.cl--lg-fit.hide-lg-max
-        ul.reset-list.text-right--lg-min
-          li
-            a.b-phone(href="tel:+71234567890")
-              span.b-phone__cod
-                | +7 (123)
-              |  
-              span.b-phone__num
-                | 456-78-90
-          li
-            +b-email('email@dom.ru','icon-email').b-email
+	.grid
+		.rw.rw--xs-middle
+			.cl.cl--lg-fit.cl--xs-fill
+				+b-logo('logo.png')
+			.cl.cl--lg-fill.cl--xs-fit
+				.hide-lg-max
+					.rw.rw--lg-center.rw--lg-content
+						.cl
+							+b-multiMenu(menu_main,'b-menu-main','submenu')
+				.hide-lg-min
+					button.bt.fz-180p
+						| ☰
+			.cl.cl--lg-fit.hide-lg-max
+				ul.reset-list.text-right--lg-min
+					li
+						a.b-phone(href="tel:+71234567890")
+							span.b-phone__cod
+								| +7 (123)
+							|  
+							span.b-phone__num
+								| 456-78-90
+					li
+						+b-email('email@dom.ru','icon-email').b-email

@@ -1,9 +1,10 @@
 @import 'var';
+@import 'mixin/reset-btn';
 @import 'mixin/btn-size';
 @import 'mixin/btn-icon';
 @import 'mixin/btn-group';
 
-.bn {
+.bt {
   $root: &;
   @include reset-btn;
   input {

@@ -1,25 +1,25 @@
 /*!
-    Main Project Theme
-    Front-end Developer: Sergey Podolsky
+	Main Project Theme
+	Front-end Developer: Sergey Podolsky
 */
 
-@import 'utils/functions/import';
+@import 'core/func/import';
 @import 'vars';
-@import 'utils/mixins/import';
-@import 'utils/grid/import';
-@import 'utils/helpers/import';
+@import 'core/mixin/import';
+@import 'core/grid/import';
+@import 'core/help/import';
 
 @import 'base/fonts';
 @import 'base/typography';
 @import 'base/base';
 
-@import 'components/button/core';
-@import 'components/form/core';
 @import 'components/icon/core';
-
+@import 'components/button/core';
 @import 'components/check/core';
-// @import 'components/fancybox/core';
 // @import 'components/select2/core';
+@import 'components/form/core';
+
+// @import 'components/fancybox/core';
 // @import 'components/slick/core';
 // @import 'components/tabs/core';
 

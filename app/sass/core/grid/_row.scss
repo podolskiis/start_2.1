@@ -1,11 +1,11 @@
 .#{$row} {
   flex-wrap: wrap;
   display: flex;
-  margin-top: -$grid-gutter;
   margin-left: -$grid-gutter/2;
   margin-right: -$grid-gutter/2;
+  margin-bottom: -$grid-gutter;
   & + & {
-    margin-top: 0;
+    margin-top: $grid-gutter;
   }
 }
 
@@ -58,13 +58,13 @@
     @each $gutter-suffix in 'gutter', 'gutter-x', 'gutter-y' {
       .#{$row+$mod+$breakpoint}-#{$gutter-suffix}-#{$sfx} {
         @if $gutter-suffix == 'gutter' {
-          @include gutter-rw($gutter-size);
+          @include gutter(unit($gutter-size));
         }
         @else if $gutter-suffix == 'gutter-x' {
-          @include gutter-rw-x($gutter-size);
+          @include gutter-x(unit($gutter-size));
         }
         @else if $gutter-suffix == 'gutter-y' {
-          @include gutter-rw-y($gutter-size);
+          @include gutter-y(unit($gutter-size));
         }
       }
     }
