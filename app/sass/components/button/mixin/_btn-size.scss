@@ -31,5 +31,5 @@
 		right: $padding-x;
 	}
 	@include btn-size(size($btn-size-base,$size), size($btn-font-size-base,$size));
-	@include btn-icon(get_size($btn-icon-spacing-y-base,$size));
+	@include btn-icon(size($btn-icon-spacing-y-base,$size));
 }
